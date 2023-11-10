@@ -3,7 +3,18 @@ import AriaHome1 from '../images/AriaHome1.jpeg';
 import AriaHome2 from '../images/AriaHome2.jpeg';
 import AriaHome3 from '../images/AriaHome3.jpeg';
 import AriaHome4 from '../images/AriaHome4.jpeg';
+import Michael from '../images/Michael.png';
 import Carousel from 'react-bootstrap/Carousel';
+import { Layout } from 'antd';
+
+const { Footer } = Layout;
+
+const headerStyle = {
+    fontFamily: 'Times, Times New Roman, serif',
+    fontSize: '24px',
+    padding: '10px',
+    textAlign: 'center'
+}
 
 const contentStyle = {
     height: '316px',
@@ -15,31 +26,43 @@ const contentStyle = {
 };
 
 const containerStyle = {
-    
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
-    minHeight: '100vh', // Ensure the container takes at least the full height of the viewport
-    margin: '0', // Remove any margin
+    maxHeight: '316px',
+    margin: '10px', // Remove any margin
     padding: '0', // Remove any padding
 };
 
+const imageStyle = {
+    width: '389ppx',
+    height: '386px',
+    paddingRight: '20px'
+}
+
 const Home = () => (
-    <div style={containerStyle}>
-        <Carousel interval={5000} pause={false}>
-            <Carousel.Item>
-                <img style={contentStyle} src={AriaHome1} alt="Slide 1" />
-            </Carousel.Item>
-            <Carousel.Item>
-                <img style={contentStyle} src={AriaHome2} alt="Slide 2" />
-            </Carousel.Item>
-            <Carousel.Item>
-                <img style={contentStyle} src={AriaHome3} alt="Slide 3" />
-            </Carousel.Item>
-            <Carousel.Item>
-                <img style={contentStyle} src={AriaHome4} alt="Slide 4" />
-            </Carousel.Item>
-        </Carousel>
+    <div>
+        <h1 style={headerStyle}>Home</h1>
+        <div style={containerStyle}>
+            <Carousel interval={5000} pause={false}>
+                <Carousel.Item>
+                    <img style={contentStyle} src={AriaHome1} alt="Slide 1" />
+                </Carousel.Item>
+                <Carousel.Item>
+                    <img style={contentStyle} src={AriaHome2} alt="Slide 2" />
+                </Carousel.Item>
+                <Carousel.Item>
+                    <img style={contentStyle} src={AriaHome3} alt="Slide 3" />
+                </Carousel.Item>
+                <Carousel.Item>
+                    <img style={contentStyle} src={AriaHome4} alt="Slide 4" />
+                </Carousel.Item>
+            </Carousel>
+        </div>
+        <div style={{textAlign: 'center'}}>
+            <img style={imageStyle} src={Michael} />
+        </div>
+        <Footer style={{ textAlign: 'center' }}>ARIA DESIGN CONSULTANTS © 2014</Footer>
     </div>
 );
 
