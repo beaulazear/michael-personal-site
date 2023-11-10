@@ -37,8 +37,19 @@ const containerStyle = {
 const imageStyle = {
     width: '389ppx',
     height: '386px',
-    paddingRight: '20px'
+    marginRight: '20px',
+    marginBottom: '40px',
 }
+
+const footerStyle = {
+    textAlign: 'center',
+    width: '100%', // Make the footer 100% wide
+    position: 'fixed', // Stick the footer to the bottom
+    bottom: '0', // Set the bottom position to 0
+    backgroundColor: '#001529', // Set the background color if needed
+    color: '#fff', // Set the text color if needed
+    padding: '10px', // Add padding if needed
+};
 
 const Home = () => (
     <div>
@@ -62,7 +73,7 @@ const Home = () => (
         <div style={{textAlign: 'center'}}>
             <img style={imageStyle} src={Michael} />
         </div>
-        <Footer style={{ textAlign: 'center' }}>ARIA DESIGN CONSULTANTS © 2014</Footer>
+        <Footer style={footerStyle}>ARIA DESIGN CONSULTANTS © 2014</Footer>
     </div>
 );
 

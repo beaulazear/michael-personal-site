@@ -17,8 +17,19 @@ export default function Contact() {
 
     const imageStyle = {
         width: '372.48x',
-        height: '216px'
+        height: '216px',
+        marginBottom: '40px'
     }
+
+    const footerStyle = {
+        textAlign: 'center',
+        width: '100%', // Make the footer 100% wide
+        position: 'fixed', // Stick the footer to the bottom
+        bottom: '0', // Set the bottom position to 0
+        backgroundColor: '#001529', // Set the background color if needed
+        color: '#fff', // Set the text color if needed
+        padding: '10px', // Add padding if needed
+    };
 
     const cardStyle = {
         maxWidth: '500px', // You can adjust the max width as needed
@@ -27,7 +38,7 @@ export default function Contact() {
         fontFamily: 'Times, Times New Roman, serif',
         border: '0px'
     };
-    
+
     return (
         <div style={{ textAlign: 'center', margin: 'auto' }}>
             <h1 style={headerStyle}>Contact</h1>
@@ -41,7 +52,7 @@ export default function Contact() {
                 </Card.Body>
             </Card>
             <img alt="brand with michaels contact info" style={imageStyle} src={AriaMichael} />
-            <Footer style={{ textAlign: 'center' }}>ARIA DESIGN CONSULTANTS © 2014</Footer>
+            <Footer style={footerStyle}>ARIA DESIGN CONSULTANTS © 2014</Footer>
         </div>
     )
 }

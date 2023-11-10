@@ -26,6 +26,16 @@ const cardStyle = {
     marginBottom: '20px', // Add some space between cards
 };
 
+const footerStyle = {
+    textAlign: 'center',
+    width: '100%', // Make the footer 100% wide
+    position: 'fixed', // Stick the footer to the bottom
+    bottom: '0', // Set the bottom position to 0
+    backgroundColor: '#001529', // Set the background color if needed
+    color: '#fff', // Set the text color if needed
+    padding: '10px', // Add padding if needed
+};
+
 export default function Projects() {
     return (
         <div style={cardContainerStyle}>
@@ -51,7 +61,7 @@ export default function Projects() {
                     <Card.Text>Complete gut renovation and architectural re-imagining of a post-war, white glove co-op including new walls, floors, doors, ceilings, electrical, HVAC, plumbing, lighting, kitchen, bath, closets and custom design of furnishings and art.</Card.Text>
                 </Card.Body>
             </Card>
-            <Footer style={{ textAlign: 'center' }}>ARIA DESIGN CONSULTANTS © 2014</Footer>
+            <Footer style={footerStyle}>ARIA DESIGN CONSULTANTS © 2014</Footer>
         </div>
     );
 }
