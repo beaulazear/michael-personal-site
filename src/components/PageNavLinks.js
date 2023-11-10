@@ -9,12 +9,12 @@ import Aria_header from '../images/Aria_header.png'
 
 const headerStyle = {
     fontFamily: 'Times, Times New Roman, serif',
-    fontSize: '24px',
+    fontSize: '22px',
 }
 
 const imageHeaderStyle = {
-    height: '41.125px',
-    width: '128.625px'
+    height: '33px',
+    width: '102.9px'
 }
 
 const StyledNavLink = styled(NavLink)`

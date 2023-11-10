@@ -19,6 +19,7 @@ export default function Projects() {
     const cardStyle = {
         maxWidth: '800px', // You can adjust the max width as needed
         margin: 'auto', // Center the cards
+        padding: '10px'
     };
 
     return (

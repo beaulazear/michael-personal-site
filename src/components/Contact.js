@@ -9,13 +9,12 @@ export default function Contact() {
     const headerStyle = {
         fontFamily: 'Times, Times New Roman, serif',
         fontSize: '24px',
-        padding: '10px',
         textAlign: 'center'
     }
     
     const imageStyle = {
-        width: '517.33px',
-        height: '300px'
+        width: '413.86x',
+        height: '240px'
     }
 
     return (
