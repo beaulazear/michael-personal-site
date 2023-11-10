@@ -23,7 +23,7 @@ const cardContainerStyle = {
 const cardStyle = {
     maxWidth: '800px',
     width: '100%', // Ensure the card takes full width
-    marginBottom: '20px', // Add some space between cards
+    marginBottom: '45px', // Add some space between cards
 };
 
 const footerStyle = {
