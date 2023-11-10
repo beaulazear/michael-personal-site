@@ -13,8 +13,8 @@ export default function Contact() {
     }
     
     const imageStyle = {
-        width: '413.86x',
-        height: '240px'
+        width: '372.48x',
+        height: '216px'
     }
 
     return (

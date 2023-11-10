@@ -22,7 +22,6 @@ const StyledNavLink = styled(NavLink)`
   text-decoration: none; /* Remove the default underline */
   transition: color 0.3s ease-in-out; /* Add a smooth color transition on hover */
   padding: 10px;
-  text-align: right;
   &:hover {
     color: #2c3e50; /* Change the text color on hover */
   }
@@ -50,7 +49,7 @@ function PageNavLinks() {
                     onClick={() => setExpanded(!expanded)}
                 />
                 <Navbar.Collapse id="basic-navbar-nav" onSelect={handleNavCollapse}>
-                    <Nav className="me-auto">
+                    <Nav className="flex-row">
                         <StyledNavLink onClick={() => setExpanded(!expanded)} to="/" exact>
                             Home
                         </StyledNavLink>
