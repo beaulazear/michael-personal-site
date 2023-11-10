@@ -11,20 +11,24 @@ const headerStyle = {
     fontFamily: 'Times, Times New Roman, serif',
     fontSize: '24px',
     padding: '10px',
-    textAlign: 'center'
-}
+    textAlign: 'center',
+};
+
+const cardContainerStyle = {
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
+};
+
+const cardStyle = {
+    maxWidth: '800px',
+    width: '100%', // Ensure the card takes full width
+    marginBottom: '20px', // Add some space between cards
+};
 
 export default function Projects() {
-
-    const cardStyle = {
-        maxWidth: '800px', // You can adjust the max width as needed
-        margin: 'auto', // Center the cards
-        padding: '10px',
-        marginLeft: '25px'
-    };
-
     return (
-        <div>
+        <div style={cardContainerStyle}>
             <h1 style={headerStyle}>Recent Projects</h1>
             <Card style={cardStyle}>
                 <Card.Img variant="top" src={Southampton} />
@@ -33,11 +37,10 @@ export default function Projects() {
                     <Card.Text>Architectural transformation of a 3-bedroom ranch into a 5-bedroom residence with an office, separate garage and new pool and spa on a private, estate-like property.</Card.Text>
                 </Card.Body>
             </Card>
-            <br></br>
             <Card style={cardStyle}>
                 <Card.Img variant="top" src={Greenwhich_village} />
                 <Card.Body>
-                    <Card.Title>Greenwhich Village, NYC</Card.Title>
+                    <Card.Title>Greenwich Village, NYC</Card.Title>
                     <Card.Text>Complete gut renovation and architectural re-imagining of a post-war, white glove co-op including new walls, floors, doors, ceilings, electrical, HVAC, plumbing, lighting, kitchen, bath, closets and custom design of furnishings and art.</Card.Text>
                 </Card.Body>
             </Card>
@@ -50,5 +53,5 @@ export default function Projects() {
             </Card>
             <Footer style={{ textAlign: 'center' }}>ARIA DESIGN CONSULTANTS © 2014</Footer>
         </div>
-    )
+    );
 }
