@@ -1,67 +1,20 @@
 import React from 'react';
-import { Breadcrumb, Layout, Menu, theme } from 'antd';
+import "bootstrap/dist/css/bootstrap.min.css";
+import { Route, Routes } from 'react-router-dom';
+import PageNavLinks from './components/PageNavLinks';
+import Home from './components/Home'
+import Contact from './components/Contact'
+import Projects from './components/Projects';
 
-const { Header, Content, Footer } = Layout;
-
-const App = () => {
-  const {
-    token: { colorBgContainer },
-  } = theme.useToken();
-
+export default function App() {
   return (
-    <Layout className="layout">
-      <Header
-        style={{
-          display: 'flex',
-          alignItems: 'center',
-        }}
-      >
-        <div className="demo-logo" />
-        <Menu
-          theme="dark"
-          mode="horizontal"
-          defaultSelectedKeys={['2']}
-          items={new Array(3).fill(null).map((_, index) => {
-            const key = index + 1;
-            return {
-              key,
-              label: `nav ${key}`,
-            };
-          })}
-        />
-      </Header>
-      <Content
-        style={{
-          padding: '0 50px',
-        }}
-      >
-        <Breadcrumb
-          style={{
-            margin: '16px 0',
-          }}
-        >
-          <Breadcrumb.Item>Home</Breadcrumb.Item>
-          <Breadcrumb.Item>List</Breadcrumb.Item>
-          <Breadcrumb.Item>App</Breadcrumb.Item>
-        </Breadcrumb>
-        <div
-          className="site-layout-content"
-          style={{
-            background: colorBgContainer,
-          }}
-        >
-          Content
-        </div>
-      </Content>
-      <Footer
-        style={{
-          textAlign: 'center',
-        }}
-      >
-        Ant Design ©2023 Created by Ant UED
-      </Footer>
-    </Layout>
-  );
+    <div>
+      <PageNavLinks />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/projects" element={<Projects />} />
+        <Route path="/contact" element={<Contact />} />
+      </Routes>
+    </div>
+  )
 };
-
-export default App;
