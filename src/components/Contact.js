@@ -9,12 +9,6 @@ const { Footer } = Layout;
 
 export default function Contact() {
 
-    const headerStyle = {
-        fontFamily: 'Times, Times New Roman, serif',
-        fontSize: '24px',
-        textAlign: 'center'
-    }
-
     const imageStyle = {
         width: '372.48x',
         height: '216px',
@@ -45,7 +39,7 @@ export default function Contact() {
                 <Image src={Michael2} roundedCircle />
                 <Card.Body>
                     <Card.Title>Michael S. Murray</Card.Title>
-                    <Card.Text>
+                    <Card.Text style={{textAlign: 'left'}}>
                         Originally from Chicago, Michael's love of architecture was sparked by Louis Sullivan's work in and around the city. He combines his passions for architecture, construction and design to transform residential properties in suburban Chicago, New York City and the Hamptons into their highest potential, while delivering exceptional value for clients.
                     </Card.Text>
                 </Card.Body>
