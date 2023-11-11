@@ -41,7 +41,6 @@ export default function Contact() {
 
     return (
         <div style={{ textAlign: 'center', margin: 'auto' }}>
-            <h1 style={headerStyle}>Contact</h1>
             <Card style={cardStyle}>
                 <Image src={Michael2} roundedCircle />
                 <Card.Body>

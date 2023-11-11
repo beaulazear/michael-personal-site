@@ -1,7 +1,6 @@
 import React from "react";
 import AriaNewHome1 from '../images/AriaNewHome1.png';
 import AriaNewHome2 from '../images/AriaNewHome2.png';
-import AriaHome3 from '../images/AriaHome3.jpeg';
 import AriaHome4 from '../images/AriaHome4.jpeg';
 import BKTH2 from '../images/BKTH2.png'
 import Michael from '../images/Michael.png';

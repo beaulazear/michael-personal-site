@@ -32,35 +32,24 @@ const StyledNavLink = styled(NavLink)`
 `;
 
 function PageNavLinks() {
-    const [expanded, setExpanded] = useState(false);
-
-    const handleNavCollapse = () => {
-        setExpanded(false);
-    };
 
     return (
-        <Navbar expand="lg" className="bg-body" expanded={expanded}>
+        <Navbar expand="lg" className="bg-body">
             <Container className="flex-row">
-                <Navbar.Brand style={headerStyle} as={NavLink} to="/" onClick={handleNavCollapse}>
+                <Navbar.Brand style={headerStyle} as={NavLink} to="/">
                     <img style={imageHeaderStyle} src={Aria_header} /> DESIGN CONSULTANTS
                 </Navbar.Brand>
-                <Navbar.Toggle
-                    aria-controls="basic-navbar-nav"
-                    onClick={() => setExpanded(!expanded)}
-                />
-                <Navbar.Collapse id="basic-navbar-nav" onSelect={handleNavCollapse}>
-                    <Nav className="flex-row">
-                        <StyledNavLink onClick={() => setExpanded(!expanded)} to="/" exact>
-                            Home
-                        </StyledNavLink>
-                        <StyledNavLink onClick={() => setExpanded(!expanded)} to="/projects">
-                            Projects
-                        </StyledNavLink>
-                        <StyledNavLink onClick={() => setExpanded(!expanded)} to="/contact">
-                            Contact
-                        </StyledNavLink>
-                    </Nav>
-                </Navbar.Collapse>
+                <Nav className="flex-row">
+                    <StyledNavLink to="/" exact>
+                        Home
+                    </StyledNavLink>
+                    <StyledNavLink to="/projects">
+                        Projects
+                    </StyledNavLink>
+                    <StyledNavLink to="/contact">
+                        Contact
+                    </StyledNavLink>
+                </Nav>
             </Container>
         </Navbar>
     );
