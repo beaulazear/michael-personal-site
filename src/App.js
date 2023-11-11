@@ -5,6 +5,7 @@ import PageNavLinks from './components/PageNavLinks';
 import Home from './components/Home'
 import Contact from './components/Contact'
 import Projects from './components/Projects';
+import Furniture from './components/Furniture'
 
 export default function App() {
   return (
@@ -13,6 +14,7 @@ export default function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/projects" element={<Projects />} />
+        <Route path="/furniture" element={<Furniture />} />
         <Route path="/contact" element={<Contact />} />
       </Routes>
     </div>

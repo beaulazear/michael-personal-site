@@ -46,6 +46,9 @@ function PageNavLinks() {
                     <StyledNavLink to="/projects">
                         Projects
                     </StyledNavLink>
+                    <StyledNavLink to="/furniture">
+                        Furniture
+                    </StyledNavLink>
                     <StyledNavLink to="/contact">
                         Contact
                     </StyledNavLink>
