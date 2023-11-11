@@ -1,8 +1,9 @@
 import React from "react";
-import AriaHome1 from '../images/AriaHome1.jpeg';
-import AriaHome2 from '../images/AriaHome2.jpeg';
+import AriaNewHome1 from '../images/AriaNewHome1.png';
+import AriaNewHome2 from '../images/AriaNewHome2.png';
 import AriaHome3 from '../images/AriaHome3.jpeg';
 import AriaHome4 from '../images/AriaHome4.jpeg';
+import BKTH2 from '../images/BKTH2.png'
 import Michael from '../images/Michael.png';
 import Carousel from 'react-bootstrap/Carousel';
 import { Layout } from 'antd';
@@ -57,13 +58,13 @@ const Home = () => (
         <div style={containerStyle}>
             <Carousel interval={5000} pause={false}>
                 <Carousel.Item>
-                    <img style={contentStyle} src={AriaHome1} alt="Slide 1" />
+                    <img style={contentStyle} src={AriaNewHome1} alt="Slide 1" />
                 </Carousel.Item>
                 <Carousel.Item>
-                    <img style={contentStyle} src={AriaHome2} alt="Slide 2" />
+                    <img style={contentStyle} src={AriaNewHome2} alt="Slide 2" />
                 </Carousel.Item>
                 <Carousel.Item>
-                    <img style={contentStyle} src={AriaHome3} alt="Slide 3" />
+                    <img style={contentStyle} src={BKTH2} alt="Slide 3" />
                 </Carousel.Item>
                 <Carousel.Item>
                     <img style={contentStyle} src={AriaHome4} alt="Slide 4" />

@@ -3,6 +3,14 @@ import Card from 'react-bootstrap/Card';
 import Greenwhich_village from '../images/Greenwhich_village.jpeg';
 import River_forest from '../images/River_forest.png';
 import Southampton from '../images/Southampton.png';
+import BKTH1 from '../images/BKTH1.png';
+import BKTH3 from '../images/BKTH3.png';
+import BKTH4 from '../images/BKTH4.png';
+import TLANE1 from '../images/TLANE1.png';
+import TLANE2 from '../images/TLANE2.png';
+import TLANE3 from '../images/TLANE3.png';
+import TLANE4 from '../images/TLANE4.png';
+import TLANE5 from '../images/TLANE5.png';
 import { Layout } from 'antd';
 
 const { Footer } = Layout;
@@ -21,7 +29,7 @@ const cardContainerStyle = {
 };
 
 const cardStyle = {
-    maxWidth: '800px',
+    maxWidth: '750px',
     width: '100%', // Ensure the card takes full width
     marginBottom: '45px', // Add some space between cards
 };
@@ -40,6 +48,30 @@ export default function Projects() {
     return (
         <div style={cardContainerStyle}>
             <h1 style={headerStyle}>Recent Projects</h1>
+            <Card style={cardStyle}>
+                <Card.Img variant="top" src={BKTH1} />
+                <Card.Img variant="top" src={BKTH4} />
+                <Card.Img variant="top" src={BKTH3} />
+                <Card.Body>
+                    <Card.Title>Brooklyn Townhouse, Lincoln Place</Card.Title>
+                    <Card.Text>This was a gut renovation of the kitchen with cosmetic upgrades throughout the entire 4 floors.  When first walking into the brownstone, Michael realized that one of the real features, the lush backyard, was hidden from view.  He changed the layout of the kitchen and added a glass wall to allow a view and light to pour through.  Cosmetic changes included staining the beams a darker color, refinishing the floors, paint, wall paper and then a custom designed and built-in bookcase and stone around the fireplace.
+                        <br /><br />
+                        The downstairs bar area had everything it needed but felt like a new show home. The simple updates of painting, changing the hardware, adding an antique glass tile back splash gave the space the bespoke bar area the homeowners dreamt of.</Card.Text>
+                </Card.Body>
+            </Card>
+            <Card style={cardStyle}>
+                <Card.Img variant="top" src={TLANE1} />
+                <Card.Img variant="top" src={TLANE2} />
+                <Card.Img variant="top" src={TLANE3} />
+                <Card.Img variant="top" src={TLANE4} />
+                <Card.Img variant="top" src={TLANE5} />
+                <Card.Body>
+                    <Card.Title>Talmage Lane, Hamptons NY</Card.Title>
+                    <Card.Text>Michael purchased Talmage as a turn-around.  Originally a Sears Kit House built on a hill.  Michael reimagined this as a 3-story cottage with an addition and walk-out lower level.  When Michael is not working for a specific client, he imagines the family that will live in the home.  He builds the home and then waits for the family to find their new home.  (Maybe not the smartest business plan....  but it works)
+                        <br /><br />
+                        This was sold turn-key with all furniture, linens, kitchen items etc.  All of the furniture comes from the Rachael Ray Furniture Line, designed by Michael.</Card.Text>
+                </Card.Body>
+            </Card>
             <Card style={cardStyle}>
                 <Card.Img variant="top" src={Southampton} />
                 <Card.Body>
