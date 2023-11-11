@@ -53,7 +53,6 @@ const footerStyle = {
 
 const Home = () => (
     <div>
-        <h1 style={headerStyle}>Home</h1>
         <div style={containerStyle}>
             <Carousel interval={5000} pause={false}>
                 <Carousel.Item>
