@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/michael-personal-site/static/css/main.f96f07a4.css",
-    "main.js": "/michael-personal-site/static/js/main.22773cb6.js",
+    "main.js": "/michael-personal-site/static/js/main.6f66ed3f.js",
     "static/js/787.fb7ee47a.chunk.js": "/michael-personal-site/static/js/787.fb7ee47a.chunk.js",
     "static/media/Michael2.jpeg": "/michael-personal-site/static/media/Michael2.58bc0994fde498b6e783.jpeg",
     "static/media/River_forest.png": "/michael-personal-site/static/media/River_forest.f839e5da2090e8d1b72e.png",
@@ -24,11 +24,11 @@
     "static/media/AriaHome4.jpeg": "/michael-personal-site/static/media/AriaHome4.c44dfaf3bedbfa05d565.jpeg",
     "index.html": "/michael-personal-site/index.html",
     "main.f96f07a4.css.map": "/michael-personal-site/static/css/main.f96f07a4.css.map",
-    "main.22773cb6.js.map": "/michael-personal-site/static/js/main.22773cb6.js.map",
+    "main.6f66ed3f.js.map": "/michael-personal-site/static/js/main.6f66ed3f.js.map",
     "787.fb7ee47a.chunk.js.map": "/michael-personal-site/static/js/787.fb7ee47a.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.f96f07a4.css",
-    "static/js/main.22773cb6.js"
+    "static/js/main.6f66ed3f.js"
   ]
 }
