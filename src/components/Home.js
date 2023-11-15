@@ -9,13 +9,6 @@ import { Layout } from 'antd';
 
 const { Footer } = Layout;
 
-const headerStyle = {
-    fontFamily: 'Times, Times New Roman, serif',
-    fontSize: '24px',
-    padding: '10px',
-    textAlign: 'center'
-}
-
 const contentStyle = {
     height: '316px',
     width: '337px',
