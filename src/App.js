@@ -10,7 +10,7 @@ import Furniture from './components/Furniture'
 
 export default function App() {
   return (
-    <div>
+    <div style={{height: '100vh'}}>
       <PageNavLinks />
       <Routes>
         <Route path="/" element={<ImageGallery />} />

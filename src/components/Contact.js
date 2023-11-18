@@ -10,7 +10,7 @@ const { Footer } = Layout;
 export default function Contact() {
 
     const imageStyle = {
-        width: '372.48x',
+        width: '372.48px',
         height: '216px',
         marginBottom: '40px'
     }
@@ -36,7 +36,7 @@ export default function Contact() {
     return (
         <div style={{ textAlign: 'center', margin: 'auto' }}>
             <Card style={cardStyle}>
-                <Image src={Michael2} roundedCircle />
+                <Image src={Michael2} rounded />
                 <Card.Body>
                     <Card.Title>Michael S. Murray</Card.Title>
                     <Card.Text style={{textAlign: 'left'}}>

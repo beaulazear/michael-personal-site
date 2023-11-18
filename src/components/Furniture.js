@@ -30,7 +30,7 @@ export default function Contact() {
     return (
         <div style={{ textAlign: 'center', margin: 'auto' }}>
             <Card style={cardStyle}>
-                <Image src={michaelandrachael} roundedCircle />
+                <Image src={michaelandrachael} rounded />
                 <Card.Body>
                     <Card.Title>Rachael Ray Home</Card.Title>
                     <Card.Text style={{ textAlign: 'left' }}>

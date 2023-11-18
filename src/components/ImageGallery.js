@@ -19,12 +19,18 @@ const Image = styled.img`
     height: 257px; /* 2/3 of 386px */
     margin: 10px; /* Adjust spacing as needed */
     padding: 0;
+    @media  (max-width: 600px) {
+        margin: 0;
+        padding: 5px 0;
+        width: 100%;
+        height: 100%
+    }
 `;
 
 const footerStyle = {
     textAlign: 'center',
+    position: 'fixed',
     width: '100%', // Make the footer 100% wide
-    position: 'fixed', // Stick the footer to the bottom
     bottom: '0', // Set the bottom position to 0
     backgroundColor: '#001529', // Set the background color if needed
     color: '#fff', // Set the text color if needed
@@ -42,11 +48,13 @@ const ImageGallery = () => {
 
     return (
         <>
-            <ImageContainer>
-                {images.map((image, index) => (
-                    <Image key={index} src={image} alt={`Image ${index + 1}`} />
-                ))}
-            </ImageContainer>
+            <div syle={{ marginBottom: '55px' }}>
+                <ImageContainer>
+                    {images.map((image, index) => (
+                        <Image key={index} src={image} alt={`Image ${index + 1}`} />
+                    ))}
+                </ImageContainer>
+            </div>
             <Footer style={footerStyle}>ARIA DESIGN CONSULTANTS © 2014</Footer>
         </>
     );
