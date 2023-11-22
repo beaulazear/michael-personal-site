@@ -81,9 +81,6 @@ export default function Contact() {
         <div>
             <StyledContainer>
                 <StyledColumn>
-                    <StyledImage src={Michael2} alt="Michael" />
-                </StyledColumn>
-                <StyledColumn>
                     <StyledCard>
                         <Card.Body>
                             <Card.Title>Michael S. Murray</Card.Title>
@@ -93,6 +90,9 @@ export default function Contact() {
                             <StyledLogo alt="brand with Michael's contact info" src={AriaMichael} />
                         </Card.Body>
                     </StyledCard>
+                </StyledColumn>
+                <StyledColumn>
+                    <StyledImage src={Michael2} alt="Michael" />
                 </StyledColumn>
             </StyledContainer>
             <StyledFooter>ARIA DESIGN CONSULTANTS © 2014</StyledFooter>
