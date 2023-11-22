@@ -18,15 +18,16 @@ const imageHeaderStyle = {
 }
 
 const StyledNavLink = styled(NavLink)`
-  color: #3498db; /* Set the text color to a stylish blue */
+  color: #696969; /* Set the text color to a stylish blue */
   text-decoration: none; /* Remove the default underline */
   transition: color 0.3s ease-in-out; /* Add a smooth color transition on hover */
   padding: 10px;
   &:hover {
-    color: #2c3e50; /* Change the text color on hover */
+    color: #181818; /* Change the text color on hover */
   }
 
   &.active {
+    color: #181818;
     font-weight: bold; /* Style for the active link, e.g., bold font */
   }
 `;
@@ -45,9 +46,6 @@ function PageNavLinks() {
                     </StyledNavLink>
                     <StyledNavLink to="/projects">
                         Projects
-                    </StyledNavLink>
-                    <StyledNavLink to="/furniture">
-                        Furniture
                     </StyledNavLink>
                     <StyledNavLink to="/contact">
                         Contact

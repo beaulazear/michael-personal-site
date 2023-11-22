@@ -34,6 +34,7 @@ const StyledColumn = styled.div`
     width: 100%;
 
     @media (min-width: 650px) {
+        margin: 15px;
         &:hover {
             transform: scale(1.05);
         }
