@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/michael-personal-site/static/css/main.f96f07a4.css",
-    "main.js": "/michael-personal-site/static/js/main.e5d4e751.js",
+    "main.js": "/michael-personal-site/static/js/main.9b8dd392.js",
     "static/js/787.fb7ee47a.chunk.js": "/michael-personal-site/static/js/787.fb7ee47a.chunk.js",
     "static/media/Michael2.jpeg": "/michael-personal-site/static/media/Michael2.58bc0994fde498b6e783.jpeg",
     "static/media/River_forest.png": "/michael-personal-site/static/media/River_forest.f839e5da2090e8d1b72e.png",
@@ -18,17 +18,15 @@
     "static/media/TLANE1.png": "/michael-personal-site/static/media/TLANE1.73029b1223dbc9373aec.png",
     "static/media/michaelandrachael.png": "/michael-personal-site/static/media/michaelandrachael.755dd88581259ca2239f.png",
     "static/media/TLANE3.png": "/michael-personal-site/static/media/TLANE3.4e97edf9bc913cab0b93.png",
-    "static/media/Michael.png": "/michael-personal-site/static/media/Michael.286cae32899282d7205a.png",
     "static/media/Greenwhich_village.jpeg": "/michael-personal-site/static/media/Greenwhich_village.52d9fad14100db225de7.jpeg",
     "static/media/AriaMichael.png": "/michael-personal-site/static/media/AriaMichael.e1ecffbd9c2862fe3760.png",
-    "static/media/AriaHome4.jpeg": "/michael-personal-site/static/media/AriaHome4.c44dfaf3bedbfa05d565.jpeg",
     "index.html": "/michael-personal-site/index.html",
     "main.f96f07a4.css.map": "/michael-personal-site/static/css/main.f96f07a4.css.map",
-    "main.e5d4e751.js.map": "/michael-personal-site/static/js/main.e5d4e751.js.map",
+    "main.9b8dd392.js.map": "/michael-personal-site/static/js/main.9b8dd392.js.map",
     "787.fb7ee47a.chunk.js.map": "/michael-personal-site/static/js/787.fb7ee47a.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.f96f07a4.css",
-    "static/js/main.e5d4e751.js"
+    "static/js/main.9b8dd392.js"
   ]
 }
