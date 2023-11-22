@@ -47,7 +47,7 @@ function PageNavLinks() {
                         Projects
                     </StyledNavLink>
                     <StyledNavLink to="/furniture">
-                        Furniture & Interiors
+                        Furniture
                     </StyledNavLink>
                     <StyledNavLink to="/contact">
                         Contact

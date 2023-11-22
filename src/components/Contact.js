@@ -34,9 +34,12 @@ const StyledColumn = styled.div`
     transition: transform 0.2s ease-in-out;
     width: 100%;
 
-    &:hover {
-        transform: scale(1.05);
+    @media (min-width: 650px) {
+        &:hover {
+            transform: scale(1.05);
+        }
     }
+
 `;
 
 const StyledImage = styled.img`

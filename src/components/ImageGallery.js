@@ -11,6 +11,7 @@ const { Footer } = Layout;
 const Container = styled.div`
   text-align: center;
   padding: 20px;
+  padding-bottom: 45px
 `;
 
 const WelcomeCard = styled.div`
