@@ -1,4 +1,5 @@
 import React from "react";
+import styled from "styled-components";
 import AriaNewHome1 from '../images/AriaNewHome1.png';
 import AriaNewHome2 from '../images/AriaNewHome2.png';
 import AriaHome4 from '../images/AriaHome4.jpeg';
@@ -34,15 +35,15 @@ const imageStyle = {
     marginBottom: '40px',
 }
 
-const footerStyle = {
-    textAlign: 'center',
-    width: '100%', // Make the footer 100% wide
-    position: 'fixed', // Stick the footer to the bottom
-    bottom: '0', // Set the bottom position to 0
-    backgroundColor: '#001529', // Set the background color if needed
-    color: '#fff', // Set the text color if needed
-    padding: '10px', // Add padding if needed
-};
+const StyledFooter = styled(Footer)`
+  text-align: center;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  background-color: #001529;
+  color: #fff;
+  padding: 10px;
+`;
 
 const Home = () => (
     <div>
@@ -65,7 +66,7 @@ const Home = () => (
         <div style={{textAlign: 'center'}}>
             <img style={imageStyle} src={Michael} />
         </div>
-        <Footer style={footerStyle}>ARIA DESIGN CONSULTANTS © 2014</Footer>
+        <StyledFooter>ARIA DESIGN CONSULTANTS © 2014</StyledFooter>
     </div>
 );
 

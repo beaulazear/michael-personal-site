@@ -1,51 +1,98 @@
 import React from "react";
-import Image from 'react-bootstrap/Image';
+import styled from 'styled-components';
 import Card from 'react-bootstrap/Card';
-import AriaMichael from "../images/AriaMichael.png"
-import Michael2 from '../images/Michael2.jpeg'
+import AriaMichael from "../images/AriaMichael.png";
+import Michael2 from '../images/Michael2.jpeg';
 import { Layout } from 'antd';
 
 const { Footer } = Layout;
 
-export default function Contact() {
-
-    const imageStyle = {
-        width: '372.48px',
-        height: '216px',
-        marginBottom: '40px'
+const StyledContainer = styled.div`
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    padding-bottom: 45px;
+    max-width: 1000px;
+    margin: auto;
+    @media (max-width: 650px) {
+        display: flex;
+        flex-direction: column;
     }
+`;
 
-    const footerStyle = {
-        textAlign: 'center',
-        width: '100%', // Make the footer 100% wide
-        position: 'fixed', // Stick the footer to the bottom
-        bottom: '0', // Set the bottom position to 0
-        backgroundColor: '#001529', // Set the background color if needed
-        color: '#fff', // Set the text color if needed
-        padding: '10px', // Add padding if needed
-    };
+const StyledColumn = styled.div`
+    flex: 1;
+    padding: 20px;
+    margin: 10px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.2s ease-in-out;
+    width: 100%;
 
-    const cardStyle = {
-        maxWidth: '500px', // You can adjust the max width as needed
-        margin: 'auto', // Center the cards
-        padding: '10px',
-        fontFamily: 'Times, Times New Roman, serif',
-        border: '0px'
-    };
+    &:hover {
+        transform: scale(1.05);
+    }
+`;
 
+const StyledImage = styled.img`
+    max-width: 100%;
+    max-height: 450px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+`;
+
+const StyledCard = styled(Card)`
+    max-width: 500px;
+    margin: auto;
+    padding: 20px;
+    font-family: 'Times, Times New Roman, serif';
+    border: 0;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+`;
+
+const StyledLogo = styled.img`
+    width: 100%;
+    max-width: 372.48px;
+    height: auto;
+    margin-bottom: 20px;
+`;
+
+const StyledFooter = styled(Footer)`
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    background-color: #001529;
+    color: #fff;
+    padding: 10px;
+`;
+
+export default function Contact() {
     return (
-        <div style={{ textAlign: 'center', margin: 'auto' }}>
-            <Card style={cardStyle}>
-                <Image src={Michael2} rounded />
-                <Card.Body>
-                    <Card.Title>Michael S. Murray</Card.Title>
-                    <Card.Text style={{textAlign: 'left'}}>
-                        Originally from Chicago, Michael's love of architecture was sparked by Louis Sullivan's work in and around the city. He combines his passions for architecture, construction and design to transform residential properties in suburban Chicago, New York City and the Hamptons into their highest potential, while delivering exceptional value for clients.
-                    </Card.Text>
-                </Card.Body>
-            </Card>
-            <img alt="brand with michaels contact info" style={imageStyle} src={AriaMichael} />
-            <Footer style={footerStyle}>ARIA DESIGN CONSULTANTS © 2014</Footer>
+        <div>
+            <StyledContainer>
+                <StyledColumn>
+                    <StyledImage src={Michael2} alt="Michael" />
+                </StyledColumn>
+                <StyledColumn>
+                    <StyledCard>
+                        <Card.Body>
+                            <Card.Title>Michael S. Murray</Card.Title>
+                            <Card.Text style={{ textAlign: 'left', paddingBottom: '20px' }}>
+                                Originally from Chicago, Michael's love of architecture was sparked by Louis Sullivan's work in and around the city. He combines his passions for architecture, construction, and design to transform residential properties in suburban Chicago, New York City, and the Hamptons into their highest potential while delivering exceptional value for clients.
+                            </Card.Text>
+                            <StyledLogo alt="brand with Michael's contact info" src={AriaMichael} />
+                        </Card.Body>
+                    </StyledCard>
+                </StyledColumn>
+            </StyledContainer>
+            <StyledFooter>ARIA DESIGN CONSULTANTS © 2014</StyledFooter>
         </div>
-    )
+    );
 }

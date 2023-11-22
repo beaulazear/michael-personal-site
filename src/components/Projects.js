@@ -17,10 +17,14 @@ const { Footer } = Layout;
 
 const headerStyle = {
     fontFamily: 'Times, Times New Roman, serif',
-    fontSize: '24px',
-    padding: '10px',
+    fontSize: '36px',
+    padding: '20px 0',
     textAlign: 'center',
+    color: '#333', // Adjust the color to your preference
+    borderBottom: '2px solid #ccc', // Add a subtle border at the bottom
+    marginBottom: '20px', // Add some space below the header
 };
+
 
 const cardContainerStyle = {
     display: 'flex',
