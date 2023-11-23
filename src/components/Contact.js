@@ -17,6 +17,8 @@ const StyledContainer = styled.div`
     @media (max-width: 650px) {
         display: flex;
         flex-direction: column;
+        align-items: normal;
+        max-width: 400px;
     }
 `;
 
@@ -44,7 +46,7 @@ const StyledColumn = styled.div`
 
 const StyledImage = styled.img`
     max-width: 100%;
-    max-height: 450px;
+    max-height: 100%;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 `;
@@ -81,6 +83,9 @@ export default function Contact() {
         <div>
             <StyledContainer>
                 <StyledColumn>
+                    <StyledImage src={Michael2} alt="Michael" />
+                </StyledColumn>
+                <StyledColumn>
                     <StyledCard>
                         <Card.Body>
                             <Card.Title>Michael S. Murray</Card.Title>
@@ -90,9 +95,6 @@ export default function Contact() {
                             <StyledLogo alt="brand with Michael's contact info" src={AriaMichael} />
                         </Card.Body>
                     </StyledCard>
-                </StyledColumn>
-                <StyledColumn>
-                    <StyledImage src={Michael2} alt="Michael" />
                 </StyledColumn>
             </StyledContainer>
             <StyledFooter>ARIA DESIGN CONSULTANTS © 2014</StyledFooter>
