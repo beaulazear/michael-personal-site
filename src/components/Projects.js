@@ -15,88 +15,105 @@ import { Layout } from 'antd';
 
 const { Footer } = Layout;
 
+const containerStyle = {
+    display: 'flex',
+    flexDirection: 'column',
+    minHeight: '100vh', // Ensure the container takes the full height of the viewport
+};
+
 const headerStyle = {
     fontFamily: 'Times, Times New Roman, serif',
     fontSize: '36px',
     padding: '20px 0',
     textAlign: 'center',
-    color: '#333', // Adjust the color to your preference
-    borderBottom: '2px solid #ccc', // Add a subtle border at the bottom
-    marginBottom: '20px', // Add some space below the header
+    color: '#333',
+    borderBottom: '2px solid #ccc',
+    marginBottom: '20px',
 };
-
 
 const cardContainerStyle = {
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
+    flex: '1', // Allow the card container to grow and take remaining space
+    paddingBottom: '20px', // Add some space at the bottom
 };
 
 const cardStyle = {
     maxWidth: '750px',
-    width: '100%', // Ensure the card takes full width
-    marginBottom: '45px', // Add some space between cards
+    width: '100%',
+    marginBottom: '45px',
 };
 
 const footerStyle = {
     textAlign: 'center',
-    width: '100%', // Make the footer 100% wide
-    position: 'fixed', // Stick the footer to the bottom
-    bottom: '0', // Set the bottom position to 0
-    backgroundColor: '#001529', // Set the background color if needed
-    color: '#fff', // Set the text color if needed
-    padding: '10px', // Add padding if needed
+    width: '100%',
+    backgroundColor: '#001529',
+    color: '#fff',
+    padding: '10px',
 };
 
 export default function Projects() {
     return (
-        <div style={cardContainerStyle}>
+        <div style={containerStyle}>
             <h1 style={headerStyle}>Recent Projects</h1>
-            <Card style={cardStyle}>
-                <Card.Img variant="top" src={BKTH1} />
-                <Card.Img variant="top" src={BKTH4} />
-                <Card.Img variant="top" src={BKTH3} />
-                <Card.Body>
-                    <Card.Title>Brooklyn Townhouse, Lincoln Place</Card.Title>
-                    <Card.Text>This was a gut renovation of the kitchen with cosmetic upgrades throughout the entire 4 floors.  When first walking into the brownstone, Michael realized that one of the real features, the lush backyard, was hidden from view.  He changed the layout of the kitchen and added a glass wall to allow a view and light to pour through.  Cosmetic changes included staining the beams a darker color, refinishing the floors, paint, wall paper and then a custom designed and built-in bookcase and stone around the fireplace.
-                        <br /><br />
-                        The downstairs bar area had everything it needed but felt like a new show home. The simple updates of painting, changing the hardware, adding an antique glass tile back splash gave the space the bespoke bar area the homeowners dreamt of.</Card.Text>
-                </Card.Body>
-            </Card>
-            <Card style={cardStyle}>
-                <Card.Img variant="top" src={TLANE1} />
-                <Card.Img variant="top" src={TLANE2} />
-                <Card.Img variant="top" src={TLANE3} />
-                <Card.Img variant="top" src={TLANE4} />
-                <Card.Img variant="top" src={TLANE5} />
-                <Card.Body>
-                    <Card.Title>Talmage Lane, Hamptons NY</Card.Title>
-                    <Card.Text>Michael purchased Talmage as a turn-around.  Originally a Sears Kit House built on a hill.  Michael reimagined this as a 3-story cottage with an addition and walk-out lower level.  When Michael is not working for a specific client, he imagines the family that will live in the home.  He builds the home and then waits for the family to find their new home.  (Maybe not the smartest business plan....  but it works)
-                        <br /><br />
-                        This was sold turn-key with all furniture, linens, kitchen items etc.  All of the furniture comes from the Rachael Ray Furniture Line, designed by Michael.</Card.Text>
-                </Card.Body>
-            </Card>
-            <Card style={cardStyle}>
-                <Card.Img variant="top" src={Southampton} />
-                <Card.Body>
-                    <Card.Title>Southampton, NY</Card.Title>
-                    <Card.Text>Architectural transformation of a 3-bedroom ranch into a 5-bedroom residence with an office, separate garage and new pool and spa on a private, estate-like property.</Card.Text>
-                </Card.Body>
-            </Card>
-            <Card style={cardStyle}>
-                <Card.Img variant="top" src={Greenwhich_village} />
-                <Card.Body>
-                    <Card.Title>Greenwich Village, NYC</Card.Title>
-                    <Card.Text>Complete gut renovation and architectural re-imagining of a post-war, white glove co-op including new walls, floors, doors, ceilings, electrical, HVAC, plumbing, lighting, kitchen, bath, closets and custom design of furnishings and art.</Card.Text>
-                </Card.Body>
-            </Card>
-            <Card style={cardStyle}>
-                <Card.Img variant="top" src={River_forest} />
-                <Card.Body>
-                    <Card.Title>River Forest, NY</Card.Title>
-                    <Card.Text>Complete gut renovation and architectural re-imagining of a post-war, white glove co-op including new walls, floors, doors, ceilings, electrical, HVAC, plumbing, lighting, kitchen, bath, closets and custom design of furnishings and art.</Card.Text>
-                </Card.Body>
-            </Card>
+            <div style={cardContainerStyle}>
+                <Card style={cardStyle}>
+                    <Card.Img variant="top" src={BKTH1} />
+                    <Card.Img variant="top" src={BKTH4} />
+                    <Card.Img variant="top" src={BKTH3} />
+                    <Card.Body>
+                        <Card.Title>Brooklyn Townhouse, Lincoln Place</Card.Title>
+                        <Card.Text>
+                            This was a gut renovation of the kitchen with cosmetic upgrades throughout the entire 4 floors. When first walking into the brownstone, Michael realized that one of the real features, the lush backyard, was hidden from view. He changed the layout of the kitchen and added a glass wall to allow a view and light to pour through. Cosmetic changes included staining the beams a darker color, refinishing the floors, paint, wallpaper and then a custom designed and built-in bookcase and stone around the fireplace.
+                            <br /><br />
+                            The downstairs bar area had everything it needed but felt like a new show home. The simple updates of painting, changing the hardware, adding an antique glass tile backsplash gave the space the bespoke bar area the homeowners dreamt of.
+                        </Card.Text>
+                    </Card.Body>
+                </Card>
+                <Card style={cardStyle}>
+                    <Card.Img variant="top" src={TLANE1} />
+                    <Card.Img variant="top" src={TLANE2} />
+                    <Card.Img variant="top" src={TLANE3} />
+                    <Card.Img variant="top" src={TLANE4} />
+                    <Card.Img variant="top" src={TLANE5} />
+                    <Card.Body>
+                        <Card.Title>Talmage Lane, Hamptons NY</Card.Title>
+                        <Card.Text>
+                            Michael purchased Talmage as a turn-around. Originally a Sears Kit House built on a hill. Michael reimagined this as a 3-story cottage with an addition and walk-out lower level. When Michael is not working for a specific client, he imagines the family that will live in the home. He builds the home and then waits for the family to find their new home. (Maybe not the smartest business plan.... but it works)
+                            <br /><br />
+                            This was sold turn-key with all furniture, linens, kitchen items etc. All of the furniture comes from the Rachael Ray Furniture Line, designed by Michael.
+                        </Card.Text>
+                    </Card.Body>
+                </Card>
+                <Card style={cardStyle}>
+                    <Card.Img variant="top" src={Southampton} />
+                    <Card.Body>
+                        <Card.Title>Southampton, NY</Card.Title>
+                        <Card.Text>
+                            Architectural transformation of a 3-bedroom ranch into a 5-bedroom residence with an office, separate garage, and new pool and spa on a private, estate-like property.
+                        </Card.Text>
+                    </Card.Body>
+                </Card>
+                <Card style={cardStyle}>
+                    <Card.Img variant="top" src={Greenwhich_village} />
+                    <Card.Body>
+                        <Card.Title>Greenwich Village, NYC</Card.Title>
+                        <Card.Text>
+                            Complete gut renovation and architectural re-imagining of a post-war, white glove co-op including new walls, floors, doors, ceilings, electrical, HVAC, plumbing, lighting, kitchen, bath, closets, and custom design of furnishings and art.
+                        </Card.Text>
+                    </Card.Body>
+                </Card>
+                <Card style={cardStyle}>
+                    <Card.Img variant="top" src={River_forest} />
+                    <Card.Body>
+                        <Card.Title>River Forest, NY</Card.Title>
+                        <Card.Text>
+                            Complete gut renovation and architectural re-imagining of a post-war, white glove co-op including new walls, floors, doors, ceilings, electrical, HVAC, plumbing, lighting, kitchen, bath, closets, and custom design of furnishings and art.
+                        </Card.Text>
+                    </Card.Body>
+                </Card>
+            </div>
             <Footer style={footerStyle}>ARIA DESIGN CONSULTANTS © 2014</Footer>
         </div>
     );

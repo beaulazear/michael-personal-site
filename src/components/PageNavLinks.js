@@ -1,58 +1,107 @@
 import React, { useState } from "react";
-import "bootstrap/dist/css/bootstrap.min.css";
-import Container from 'react-bootstrap/Container';
-import Nav from 'react-bootstrap/Nav';
-import Navbar from 'react-bootstrap/Navbar';
-import { NavLink } from 'react-router-dom';
-import styled from 'styled-components';
-import Aria_header from '../images/Aria_header.png'
+import { MenuOutlined } from "@ant-design/icons";
+import { NavLink } from "react-router-dom";
+import styled from "styled-components";
+import Aria_header from "../images/Aria_header.png";
 
-const headerStyle = {
-    fontFamily: 'Times, Times New Roman, serif',
-    fontSize: '22px',
-}
+const HeaderContainer = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+  background-color: #f8f8f8;
+  position: relative;
+  width: 100%;
+`;
 
-const imageHeaderStyle = {
-    height: '33px',
-    width: '102.9px'
-}
+const LogoContainer = styled.div`
+  display: flex;
+  align-items: center;
+`;
+
+const MenuIcon = styled(MenuOutlined)`
+  font-size: 24px;
+  cursor: pointer;
+  position: absolute;
+  right: 20px;
+`;
+
+const HeaderTitle = styled.div`
+  font-family: 'Times, Times New Roman, serif';
+  font-size: 22px;
+  margin-left: 10px;
+`;
+
+const LogoImage = styled.img`
+  height: 33px;
+  width: 102.9px;
+`;
 
 const StyledNavLink = styled(NavLink)`
-  color: #696969; /* Set the text color to a stylish blue */
-  text-decoration: none; /* Remove the default underline */
-  transition: color 0.3s ease-in-out; /* Add a smooth color transition on hover */
-  padding: 10px;
+  color: #333; /* Darker, sharper color */
+  text-decoration: none;
+  padding: 15px 0;
+  font-size: 1.2em;
+  font-weight: 600; /* Bold for a more professional look */
+  text-transform: uppercase; /* Make text uppercase */
+  letter-spacing: 1px; /* Add subtle letter spacing */
+  transition: color 0.3s ease-in-out;
+
   &:hover {
-    color: #181818; /* Change the text color on hover */
+    color: #0073e6; /* Professional blue on hover */
   }
 
   &.active {
-    color: #181818;
-    font-weight: bold; /* Style for the active link, e.g., bold font */
+    color: #0073e6;
+    border-bottom: 2px solid #0073e6; /* Underline active link */
   }
 `;
 
+const LinksContainer = styled.div`
+  display: ${({ visible }) => (visible ? "flex" : "none")};
+  flex-direction: column;
+  align-items: center;
+  background-color: #f8f8f8;
+  padding: 20px;
+  border-top: 2px solid #ddd;
+  transition: max-height 0.3s ease;
+  max-height: ${({ visible }) => (visible ? "250px" : "0")};
+  overflow: hidden;
+`;
+
+
 function PageNavLinks() {
+    const [linksVisible, setLinksVisible] = useState(false);
+
+    const toggleLinks = () => {
+        setLinksVisible(!linksVisible);
+    };
+
+    const handleLinkClick = () => {
+        setLinksVisible(false);
+    };
 
     return (
-        <Navbar expand="lg" className="bg-body">
-            <Container className="flex-row">
-                <Navbar.Brand style={headerStyle} as={NavLink} to="/">
-                    <img style={imageHeaderStyle} src={Aria_header} /> DESIGN CONSULTANTS
-                </Navbar.Brand>
-                <Nav className="flex-row">
-                    <StyledNavLink to="/" exact>
-                        Home
-                    </StyledNavLink>
-                    <StyledNavLink to="/projects">
-                        Projects
-                    </StyledNavLink>
-                    <StyledNavLink to="/contact">
-                        Contact
-                    </StyledNavLink>
-                </Nav>
-            </Container>
-        </Navbar>
+        <>
+            <HeaderContainer>
+                <LogoContainer>
+                    <LogoImage src={Aria_header} alt="Header Logo" />
+                    <HeaderTitle>DESIGN CONSULTANTS</HeaderTitle>
+                </LogoContainer>
+                <MenuIcon onClick={toggleLinks} />
+            </HeaderContainer>
+            <LinksContainer visible={linksVisible}>
+                <StyledNavLink to="/" exact onClick={handleLinkClick}>
+                    Home
+                </StyledNavLink>
+                <StyledNavLink to="/projects" onClick={handleLinkClick}>
+                    Projects
+                </StyledNavLink>
+                <StyledNavLink to="/contact" onClick={handleLinkClick}>
+                    Contact
+                </StyledNavLink>
+            </LinksContainer>
+        </>
     );
 }
 
