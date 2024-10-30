@@ -51,6 +51,8 @@ const footerStyle = {
     backgroundColor: '#001529',
     color: '#fff',
     padding: '10px',
+    bottom: '0',
+    position: 'fixed',
 };
 
 export default function Projects() {
