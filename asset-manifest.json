@@ -1,14 +1,11 @@
 {
   "files": {
     "main.css": "/static/css/main.f96f07a4.css",
-    "main.js": "/static/js/main.ebbe0eca.js",
+    "main.js": "/static/js/main.f30fc2d8.js",
     "static/js/787.fb7ee47a.chunk.js": "/static/js/787.fb7ee47a.chunk.js",
     "static/media/Michael2.jpeg": "/static/media/Michael2.58bc0994fde498b6e783.jpeg",
-    "static/media/River_forest.png": "/static/media/River_forest.f839e5da2090e8d1b72e.png",
-    "static/media/Southampton.png": "/static/media/Southampton.bf21169bf1e1ff26cd03.png",
     "static/media/AriaNewHome2.png": "/static/media/AriaNewHome2.a560cfede8d88787733a.png",
     "static/media/TLANE4.png": "/static/media/TLANE4.c58c709c7d807d599f6f.png",
-    "static/media/AriaNewHome1.png": "/static/media/AriaNewHome1.c7ac98f183e8a4a7e4ce.png",
     "static/media/BKTH1.png": "/static/media/BKTH1.4f7ecf22d629987f0ac1.png",
     "static/media/BKTH4.png": "/static/media/BKTH4.a6f4ab25547e2a01d0c1.png",
     "static/media/BKTH2.png": "/static/media/BKTH2.96de746d5954a0cf7dc7.png",
@@ -18,15 +15,14 @@
     "static/media/TLANE1.png": "/static/media/TLANE1.73029b1223dbc9373aec.png",
     "static/media/michaelandrachael.png": "/static/media/michaelandrachael.755dd88581259ca2239f.png",
     "static/media/TLANE3.png": "/static/media/TLANE3.4e97edf9bc913cab0b93.png",
-    "static/media/Greenwhich_village.jpeg": "/static/media/Greenwhich_village.52d9fad14100db225de7.jpeg",
     "static/media/AriaMichael.png": "/static/media/AriaMichael.e1ecffbd9c2862fe3760.png",
     "index.html": "/index.html",
     "main.f96f07a4.css.map": "/static/css/main.f96f07a4.css.map",
-    "main.ebbe0eca.js.map": "/static/js/main.ebbe0eca.js.map",
+    "main.f30fc2d8.js.map": "/static/js/main.f30fc2d8.js.map",
     "787.fb7ee47a.chunk.js.map": "/static/js/787.fb7ee47a.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.f96f07a4.css",
-    "static/js/main.ebbe0eca.js"
+    "static/js/main.f30fc2d8.js"
   ]
 }
