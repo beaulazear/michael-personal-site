@@ -18,31 +18,53 @@ const { Footer } = Layout;
 const containerStyle = {
     display: 'flex',
     flexDirection: 'column',
-    minHeight: '100vh', // Ensure the container takes the full height of the viewport
+    minHeight: '100vh',
+    padding: '20px', // Add padding for better spacing
+    boxSizing: 'border-box',
 };
 
 const headerStyle = {
     fontFamily: 'Times, Times New Roman, serif',
-    fontSize: '36px',
-    padding: '20px 0',
+    fontSize: '32px',
+    padding: '10px 0',
     textAlign: 'center',
     color: '#333',
     borderBottom: '2px solid #ccc',
     marginBottom: '20px',
+    letterSpacing: '1px',
 };
 
 const cardContainerStyle = {
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
-    flex: '1', // Allow the card container to grow and take remaining space
-    paddingBottom: '20px', // Add some space at the bottom
+    flex: '1',
+    paddingBottom: '20px',
 };
 
 const cardStyle = {
     maxWidth: '750px',
     width: '100%',
-    marginBottom: '45px',
+    marginBottom: '30px',
+    padding: '15px', // Add padding inside cards for a polished look
+    boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',
+};
+
+const cardImageStyle = {
+    borderRadius: '5px', // Rounded corners for a more modern look
+    marginBottom: '10px',
+};
+
+const cardTitleStyle = {
+    fontSize: '1.5em',
+    marginBottom: '10px',
+    color: '#333',
+};
+
+const cardTextStyle = {
+    fontSize: '1em',
+    color: '#555',
+    lineHeight: '1.6',
 };
 
 const footerStyle = {
@@ -61,12 +83,12 @@ export default function Projects() {
             <h1 style={headerStyle}>Recent Projects</h1>
             <div style={cardContainerStyle}>
                 <Card style={cardStyle}>
-                    <Card.Img variant="top" src={BKTH1} />
-                    <Card.Img variant="top" src={BKTH4} />
-                    <Card.Img variant="top" src={BKTH3} />
+                    <Card.Img variant="top" src={BKTH1} style={cardImageStyle} />
+                    <Card.Img variant="top" src={BKTH4} style={cardImageStyle} />
+                    <Card.Img variant="top" src={BKTH3} style={cardImageStyle} />
                     <Card.Body>
-                        <Card.Title>Brooklyn Townhouse, Lincoln Place</Card.Title>
-                        <Card.Text>
+                        <Card.Title style={cardTitleStyle}>Brooklyn Townhouse, Lincoln Place</Card.Title>
+                        <Card.Text style={cardTextStyle}>
                             This was a gut renovation of the kitchen with cosmetic upgrades throughout the entire 4 floors. When first walking into the brownstone, Michael realized that one of the real features, the lush backyard, was hidden from view. He changed the layout of the kitchen and added a glass wall to allow a view and light to pour through. Cosmetic changes included staining the beams a darker color, refinishing the floors, paint, wallpaper and then a custom designed and built-in bookcase and stone around the fireplace.
                             <br /><br />
                             The downstairs bar area had everything it needed but felt like a new show home. The simple updates of painting, changing the hardware, adding an antique glass tile backsplash gave the space the bespoke bar area the homeowners dreamt of.
@@ -74,14 +96,14 @@ export default function Projects() {
                     </Card.Body>
                 </Card>
                 <Card style={cardStyle}>
-                    <Card.Img variant="top" src={TLANE1} />
-                    <Card.Img variant="top" src={TLANE2} />
-                    <Card.Img variant="top" src={TLANE3} />
-                    <Card.Img variant="top" src={TLANE4} />
-                    <Card.Img variant="top" src={TLANE5} />
+                    <Card.Img variant="top" src={TLANE1} style={cardImageStyle} />
+                    <Card.Img variant="top" src={TLANE2} style={cardImageStyle} />
+                    <Card.Img variant="top" src={TLANE3} style={cardImageStyle} />
+                    <Card.Img variant="top" src={TLANE4} style={cardImageStyle} />
+                    <Card.Img variant="top" src={TLANE5} style={cardImageStyle} />
                     <Card.Body>
-                        <Card.Title>Talmage Lane, Hamptons NY</Card.Title>
-                        <Card.Text>
+                        <Card.Title style={cardTitleStyle}>Talmage Lane, Hamptons NY</Card.Title>
+                        <Card.Text style={cardTextStyle}>
                             Michael purchased Talmage as a turn-around. Originally a Sears Kit House built on a hill. Michael reimagined this as a 3-story cottage with an addition and walk-out lower level. When Michael is not working for a specific client, he imagines the family that will live in the home. He builds the home and then waits for the family to find their new home. (Maybe not the smartest business plan.... but it works)
                             <br /><br />
                             This was sold turn-key with all furniture, linens, kitchen items etc. All of the furniture comes from the Rachael Ray Furniture Line, designed by Michael.
@@ -89,28 +111,28 @@ export default function Projects() {
                     </Card.Body>
                 </Card>
                 <Card style={cardStyle}>
-                    <Card.Img variant="top" src={Southampton} />
+                    <Card.Img variant="top" src={Southampton} style={cardImageStyle} />
                     <Card.Body>
-                        <Card.Title>Southampton, NY</Card.Title>
-                        <Card.Text>
+                        <Card.Title style={cardTitleStyle}>Southampton, NY</Card.Title>
+                        <Card.Text style={cardTextStyle}>
                             Architectural transformation of a 3-bedroom ranch into a 5-bedroom residence with an office, separate garage, and new pool and spa on a private, estate-like property.
                         </Card.Text>
                     </Card.Body>
                 </Card>
                 <Card style={cardStyle}>
-                    <Card.Img variant="top" src={Greenwhich_village} />
+                    <Card.Img variant="top" src={Greenwhich_village} style={cardImageStyle} />
                     <Card.Body>
-                        <Card.Title>Greenwich Village, NYC</Card.Title>
-                        <Card.Text>
+                        <Card.Title style={cardTitleStyle}>Greenwich Village, NYC</Card.Title>
+                        <Card.Text style={cardTextStyle}>
                             Complete gut renovation and architectural re-imagining of a post-war, white glove co-op including new walls, floors, doors, ceilings, electrical, HVAC, plumbing, lighting, kitchen, bath, closets, and custom design of furnishings and art.
                         </Card.Text>
                     </Card.Body>
                 </Card>
                 <Card style={cardStyle}>
-                    <Card.Img variant="top" src={River_forest} />
+                    <Card.Img variant="top" src={River_forest} style={cardImageStyle} />
                     <Card.Body>
-                        <Card.Title>River Forest, NY</Card.Title>
-                        <Card.Text>
+                        <Card.Title style={cardTitleStyle}>River Forest, NY</Card.Title>
+                        <Card.Text style={cardTextStyle}>
                             Complete gut renovation and architectural re-imagining of a post-war, white glove co-op including new walls, floors, doors, ceilings, electrical, HVAC, plumbing, lighting, kitchen, bath, closets, and custom design of furnishings and art.
                         </Card.Text>
                     </Card.Body>
