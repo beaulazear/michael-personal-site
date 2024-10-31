@@ -5,6 +5,7 @@ import PageNavLinks from './components/PageNavLinks';
 import ImageGallery from './components/ImageGallery';
 import Contact from './components/Contact'
 import Projects from './components/Projects';
+import FooterComponent from './components/Footer';
 import Furniture from './components/Furniture'
 
 export default function App() {
@@ -17,6 +18,7 @@ export default function App() {
         <Route path="/furniture" element={<Furniture />} />
         <Route path="/contact" element={<Contact />} />
       </Routes>
+      <FooterComponent />
     </div>
   )
 };

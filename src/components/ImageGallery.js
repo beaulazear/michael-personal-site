@@ -1,92 +1,81 @@
 import React from 'react';
 import styled from 'styled-components';
-import AriaNewHome1 from '../images/AriaNewHome1.png';
 import AriaNewHome2 from '../images/AriaNewHome2.png';
 import BKTH2 from '../images/BKTH2.png';
-import { Layout } from 'antd';
-
-const { Footer } = Layout;
+import TLANE3 from '../images/TLANE3.png';
 
 const Container = styled.div`
   text-align: center;
-  padding: 20px;
-  padding-bottom: 45px;
-  background-color: #f9f9f9; /* Light background for contrast */
+  padding: 20px 20px 45px;
+  background-color: #f9f9f9;
+  height: 100%;
 `;
 
-const WelcomeCard = styled.div`
-  max-width: 800px; /* Increased max-width for larger screens */
-  margin: 0 auto;
-  padding: 30px; /* Increased padding for a more spacious feel */
-  border: 1px solid #e0e0e0; /* Softer border color */
-  border-radius: 12px; /* Slightly more rounded corners */
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); /* More pronounced shadow */
-  background-color: #fff; /* White background for card */
-  margin-bottom: 40px; /* Increased margin below the card */
-  transition: transform 0.2s; /* Transition for hover effect */
+const IntroText = styled.h1`
+  font-size: 42px;
+  font-weight: 600;
+  color: #222;
+  margin: 0 auto 40px;
+  margin-top: 40px;
+  max-width: 60%; /* Constrains width on larger screens */
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  font-family: 'Playfair Display', serif;
+  line-height: 1.2;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.15);
 
-  &:hover {
-    transform: translateY(-5px); /* Slight lift on hover */
+  @media (max-width: 1200px) {
+    max-width: 70%; /* Slightly wider for medium-large screens */
+    margin-top: 20px;
   }
-`;
 
-const WelcomeMessage = styled.p`
-  font-size: 18px; /* Larger font size */
-  line-height: 1.6; /* Increased line height for better readability */
-  color: #333; /* Darker text for better contrast */
-  margin: 0; /* Remove default margin */
+  @media (max-width: 768px) {
+    font-size: 32px;
+    max-width: 80%; /* Wider for tablet screens */
+    margin-bottom: 30px;
+  }
+
+  @media (max-width: 550px) {
+    font-size: 26px;
+    max-width: 90%; /* Full width for mobile */
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+  }
 `;
 
 const ImageContainer = styled.div`
   display: flex;
   flex-wrap: wrap;
-  justify-content: center; /* Center images in the container */
-  margin: 20px 0; /* Added margin above and below the image container */
+  justify-content: center;
+  margin: 20px 0;
+  padding-bottom: 55px;
 `;
 
 const Image = styled.img`
-  width: 100%; /* Full width for responsiveness */
-  max-width: 280px; /* Limit max width for larger screens */
-  height: auto; /* Maintain aspect ratio */
-  margin: 15px; /* More breathing room between images */
-  border-radius: 8px; /* Rounded corners for images */
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Soft shadow for images */
+  width: 100%;
+  max-width: 280px;
+  height: auto;
+  margin: 15px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 
   @media (max-width: 550px) {
-    max-width: 90%; /* Responsive max width for small screens */
+    max-width: 90%;
   }
 `;
 
-const StyledFooter = styled(Footer)`
-  text-align: center;
-  position: fixed; /* Fixes the footer to the bottom of the screen */
-  left: 0; /* Aligns footer to the left edge */
-  bottom: 0; /* Sticks footer to the bottom */
-  width: 100%; /* Makes the footer span the full width */
-  background-color: #001529; /* Footer background color */
-  color: #fff; /* Footer text color */
-  padding: 15px; /* Increased padding for footer */
-`;
-
 const ImageGallery = () => {
-  const images = [BKTH2, AriaNewHome2, AriaNewHome1];
+  const images = [BKTH2, AriaNewHome2, TLANE3];
 
   return (
-    <>
-      <Container>
-        <WelcomeCard>
-          <WelcomeMessage>
-            Creating Timeless Elegance in Home Design and Interiors. We specialize in luxury properties in New York and the Hamptons, transforming spaces into refined living experiences.
-          </WelcomeMessage>
-        </WelcomeCard>
-        <ImageContainer>
-          {images.map((image, index) => (
-            <Image key={index} src={image} alt={`Image ${index + 1}`} />
-          ))}
-        </ImageContainer>
-      </Container>
-      <StyledFooter>ARIA DESIGN CONSULTANTS © 2014</StyledFooter>
-    </>
+    <Container>
+      <IntroText>Transforming Spaces Into Refined Living Experiences</IntroText>
+      <ImageContainer>
+        {images.map((image, index) => (
+          <Image key={index} src={image} alt={`Image ${index + 1}`} />
+        ))}
+      </ImageContainer>
+    </Container>
   );
 };
 
