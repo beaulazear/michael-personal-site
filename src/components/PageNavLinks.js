@@ -9,8 +9,8 @@ const HeaderContainer = styled.div`
   align-items: center;
   justify-content: space-between;
   padding: 10px 20px;
-  background-color: #f8f8f8;
   position: relative;
+  background-color: #FFFFFF;
   width: 100%;
 `;
 
