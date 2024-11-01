@@ -13,20 +13,20 @@ const Container = styled.div`
 
 const IntroText = styled.h1`
   font-size: 42px;
-  font-weight: 600;
+  font-weight: 100;
   color: #222;
   margin: 0 auto 40px;
   margin-top: 40px;
   max-width: 60%; /* Constrains width on larger screens */
   letter-spacing: 1.2px;
   text-transform: uppercase;
-  font-family: 'Playfair Display', serif;
+  font-family: 'Times, Times New Roman, serif';
   line-height: 1.2;
-  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.15);
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.15);
 
   @media (max-width: 1200px) {
     max-width: 70%; /* Slightly wider for medium-large screens */
-    margin-top: 20px;
+    margin-top: 15px;
   }
 
   @media (max-width: 768px) {

@@ -19,14 +19,35 @@ const Container = styled.div`
 `;
 
 const Header = styled.h1`
-    font-family: 'Times, Times New Roman, serif';
+  font-size: 32px;
+  font-weight: 100;
+  color: #222;
+  margin: 0 auto 30px;
+  margin-top: 40px;
+  max-width: 60%; /* Constrains width on larger screens */
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  font-family: 'Times, Times New Roman, serif';
+  line-height: 1.2;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.15);
+
+  @media (max-width: 1200px) {
+    max-width: 70%; /* Slightly wider for medium-large screens */
+    margin-top: 20px;
+  }
+
+  @media (max-width: 768px) {
     font-size: 32px;
-    padding: 10px 0;
-    text-align: center;
-    color: #333;
-    border-bottom: 2px solid #ccc;
-    margin-bottom: 20px;
+    max-width: 80%; /* Wider for tablet screens */
+    margin-bottom: 30px;
+  }
+
+  @media (max-width: 550px) {
+    font-size: 26px;
+    max-width: 90%; /* Full width for mobile */
     letter-spacing: 1px;
+    margin-bottom: 20px;
+  }
 `;
 
 const CardContainer = styled.div`
@@ -57,14 +78,17 @@ const CardTextContainer = styled.div`
 
 const CardTitle = styled.h2`
     font-size: 1.8em;
+    font-weight: 300;
     margin-bottom: 10px;
     color: #333;
+    font-family: 'Times, Times New Roman, serif';
 `;
 
 const CardText = styled.p`
-    font-size: 1em;
+    font-size: 1.2em;
     color: #555;
     line-height: 1.4;
+    font-family: 'Times, Times New Roman, serif';
 `;
 
 const ImageContainer = styled.div`
@@ -94,9 +118,16 @@ export default function Projects() {
                     <CardTextContainer>
                         <CardTitle>Brooklyn Townhouse, Lincoln Place</CardTitle>
                         <CardText>
-                            A full kitchen renovation and updates across four floors. The layout was reimagined to showcase the backyard with a glass wall, while updates included darker beams, refinished floors, and a custom fireplace bookcase.
+                            This was a gut renovation of the kitchen with cosmetic upgrades throughout the entire 4 floors.
+                            When first walking into the brownstone, Michael realized that one of the real features, the lush
+                            backyard, was hidden from view. He changed the layout of the kitchen and added a glass wall to allow
+                            a view and light to pour through. Cosmetic changes included staining the beams a darker color,
+                            refinishing the floors, paint, wallpaper, and then a custom-designed and built-in bookcase and stone
+                            around the fireplace.
                             <br /><br />
-                            The bar area was also refreshed with new paint, hardware, and an antique glass backsplash to add warmth and style.
+                            The downstairs bar area had everything it needed but felt like a new show home. The simple updates
+                            of painting, changing the hardware, adding an antique glass tile backsplash gave the space the bespoke
+                            bar area the homeowners dreamt of.
                         </CardText>
                     </CardTextContainer>
                     <ImageContainer>
@@ -109,7 +140,13 @@ export default function Projects() {
                     <CardTextContainer>
                         <CardTitle>Talmage Lane, Hamptons NY</CardTitle>
                         <CardText>
-                            Originally a Sears Kit House, this project turned it into a 3-story cottage with modern updates and a walk-out lower level. Sold fully furnished, including items from the Rachael Ray Furniture Line.
+                            Michael purchased Talmage as a turn-around. Originally a Sears Kit House built on a hill, Michael
+                            reimagined this as a 3-story cottage with an addition and walk-out lower level. When Michael is not
+                            working for a specific client, he imagines the family that will live in the home. He builds the home
+                            and then waits for the family to find their new home. (Maybe not the smartest business plan... but it works)
+                            <br /><br />
+                            This was sold turn-key with all furniture, linens, kitchen items, etc. All of the furniture comes
+                            from the Rachael Ray Furniture Line, designed by Michael.
                         </CardText>
                     </CardTextContainer>
                     <ImageContainer>
