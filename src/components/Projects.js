@@ -24,6 +24,7 @@ const Header = styled.h1`
   color: #222;
   margin: 0 auto 30px;
   margin-top: 40px;
+  margin-bottom: 40px;
   max-width: 60%; /* Constrains width on larger screens */
   letter-spacing: 1.2px;
   text-transform: uppercase;
@@ -33,20 +34,19 @@ const Header = styled.h1`
 
   @media (max-width: 1200px) {
     max-width: 70%; /* Slightly wider for medium-large screens */
-    margin-top: 20px;
+    margin-top: 25px;
+    margin-bottom: 25px;
   }
 
   @media (max-width: 768px) {
     font-size: 32px;
     max-width: 80%; /* Wider for tablet screens */
-    margin-bottom: 30px;
   }
 
   @media (max-width: 550px) {
     font-size: 26px;
     max-width: 90%; /* Full width for mobile */
     letter-spacing: 1px;
-    margin-bottom: 20px;
   }
 `;
 
@@ -55,7 +55,7 @@ const CardContainer = styled.div`
     flex-direction: column;
     align-items: center;
     flex: 1;
-    padding-bottom: 20px;
+    padding-bottom: 30px;
 `;
 
 const StyledCard = styled(Card)`
