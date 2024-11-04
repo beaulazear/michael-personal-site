@@ -1,6 +1,6 @@
 import React from 'react';
 import "bootstrap/dist/css/bootstrap.min.css";
-import { Route, Routes } from 'react-router-dom';
+import { Route, Routes, Navigate } from 'react-router-dom';
 import PageNavLinks from './components/PageNavLinks';
 import ImageGallery from './components/ImageGallery';
 import Contact from './components/Contact'
@@ -17,6 +17,7 @@ export default function App() {
         <Route path="/projects" element={<Projects />} />
         <Route path="/furniture" element={<Furniture />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>
       <FooterComponent />
     </div>
