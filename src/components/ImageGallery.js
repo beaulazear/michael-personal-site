@@ -1,8 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
-import AriaNewHome2 from '../images/AriaNewHome2.png';
-import BKTH2 from '../images/BKTH2.png';
-import TLANE3 from '../images/TLANE3.png';
+import LakeShore from '../images/LakeShore.jpg';
+import BKTH1 from '../images/BKTH1.png';
+import BKTH3 from '../images/BKTH3.png';
 
 const Container = styled.div`
   text-align: center;
@@ -16,7 +16,7 @@ const IntroText = styled.h1`
   color: #222;
   margin: 0 auto 40px;
   margin-top: 40px;
-  max-width: 60%; /* Constrains width on larger screens */
+  max-width: 60%;
   letter-spacing: 1.2px;
   text-transform: uppercase;
   font-family: 'Times, Times New Roman, serif';
@@ -24,19 +24,19 @@ const IntroText = styled.h1`
   text-shadow: 1px 1px 1.5px rgba(0, 0, 0, 0.15);
 
   @media (max-width: 1200px) {
-    max-width: 70%; /* Slightly wider for medium-large screens */
+    max-width: 70%;
     margin-top: 15px;
   }
 
   @media (max-width: 768px) {
     font-size: 32px;
-    max-width: 80%; /* Wider for tablet screens */
+    max-width: 80%;
     margin-bottom: 30px;
   }
 
   @media (max-width: 550px) {
     font-size: 26px;
-    max-width: 90%; /* Full width for mobile */
+    max-width: 90%;
     letter-spacing: 1px;
     margin-bottom: 20px;
   }
@@ -52,19 +52,15 @@ const ImageContainer = styled.div`
 
 const Image = styled.img`
   width: 100%;
-  max-width: 280px;
+  max-width: 300px; /* Slightly smaller on default screens */
   height: auto;
   margin: 15px;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-
-  @media (max-width: 550px) {
-    max-width: 90%;
-  }
 `;
 
 const ImageGallery = () => {
-  const images = [BKTH2, AriaNewHome2, TLANE3];
+  const images = [BKTH1, LakeShore, BKTH3];
 
   return (
     <Container>
