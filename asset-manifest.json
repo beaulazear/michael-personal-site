@@ -1,14 +1,13 @@
 {
   "files": {
     "main.css": "/static/css/main.f96f07a4.css",
-    "main.js": "/static/js/main.7d89e78a.js",
+    "main.js": "/static/js/main.05d19392.js",
     "static/js/787.fb7ee47a.chunk.js": "/static/js/787.fb7ee47a.chunk.js",
+    "static/media/LakeShore.jpg": "/static/media/LakeShore.708da23ae68c871d9755.jpg",
     "static/media/Michael2.jpeg": "/static/media/Michael2.58bc0994fde498b6e783.jpeg",
-    "static/media/AriaNewHome2.png": "/static/media/AriaNewHome2.a560cfede8d88787733a.png",
     "static/media/TLANE4.png": "/static/media/TLANE4.c58c709c7d807d599f6f.png",
     "static/media/BKTH1.png": "/static/media/BKTH1.4f7ecf22d629987f0ac1.png",
     "static/media/BKTH4.png": "/static/media/BKTH4.a6f4ab25547e2a01d0c1.png",
-    "static/media/BKTH2.png": "/static/media/BKTH2.96de746d5954a0cf7dc7.png",
     "static/media/BKTH3.png": "/static/media/BKTH3.7bcb06cb77580e1e233c.png",
     "static/media/TLANE2.png": "/static/media/TLANE2.04ac82d8797112916b37.png",
     "static/media/TLANE5.png": "/static/media/TLANE5.14468c1a3d7dddde0a08.png",
@@ -18,11 +17,11 @@
     "static/media/AriaMichael.png": "/static/media/AriaMichael.e1ecffbd9c2862fe3760.png",
     "index.html": "/index.html",
     "main.f96f07a4.css.map": "/static/css/main.f96f07a4.css.map",
-    "main.7d89e78a.js.map": "/static/js/main.7d89e78a.js.map",
+    "main.05d19392.js.map": "/static/js/main.05d19392.js.map",
     "787.fb7ee47a.chunk.js.map": "/static/js/787.fb7ee47a.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.f96f07a4.css",
-    "static/js/main.7d89e78a.js"
+    "static/js/main.05d19392.js"
   ]
 }
