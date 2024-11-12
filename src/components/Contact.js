@@ -41,11 +41,11 @@ const ImageContainer = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
-    flex-basis: 50%; // Allows image to occupy half the space in larger screens
+    flex-basis: 50%;
 
     @media (max-width: 800px) {
         order: -1;
-        width: 100%;
+        width: 80%; // Shrink the width of the image on mobile
         flex-basis: auto;
     }
 `;
@@ -53,14 +53,17 @@ const ImageContainer = styled.div`
 const Image = styled.img`
     width: 100%;
     max-width: 100%;
-    height: 100%;  // Fills the container height
+    height: 100%;
     border-radius: 10px;
     object-fit: cover;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
 
     @media (max-width: 800px) {
-        max-width: 300px;
         height: auto;
+        width: 100%;  // Allow the image to resize more naturally on smaller screens
+        max-width: 90%; // Add margin around the image
+        margin-bottom: 15px;
+        border-radius: 8px;
     }
 `;
 
@@ -73,13 +76,14 @@ const StyledCard = styled(AntCard)`
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
     padding: 30px;
     text-align: center;
-    flex-basis: 50%; // Allows card to occupy half the space in larger screens
+    flex-basis: 50%;
 
     @media (max-width: 800px) {
         box-shadow: none;
         text-align: center;
         padding: 20px;
         flex-basis: auto;
+        width: 90%; // Add a maximum width for the card on mobile for balance
     }
 `;
 
@@ -89,7 +93,7 @@ const Title = styled.h2`
     margin-bottom: 10px;
     font-family: 'Times, Times New Roman, serif';
     font-weight: 500;
-    text-shadow: .5px 0 #888888;
+    text-shadow: 0.5px 0 #888888;
     letter-spacing: 1px;
 `;
 
