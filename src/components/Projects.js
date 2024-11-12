@@ -103,8 +103,15 @@ const ExpandedDescription = styled.div`
     background-color: rgba(255, 255, 255, 0.9);
     padding: 0 15px;
 
+    // Expand content on hover for larger screens
     ${StyledCard}:hover & {
-        max-height: 600px; /* Large enough to fit all content */
+        max-height: 600px;
+        padding: 15px;
+    }
+
+    // Fully expand on small screens without hover
+    @media (max-width: 768px) {
+        max-height: none;
         padding: 15px;
     }
 `;
