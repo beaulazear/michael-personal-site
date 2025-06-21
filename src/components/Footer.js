@@ -1,21 +1,14 @@
 // FooterComponent.js
 import React from "react";
-import styled from "styled-components";
-import { Layout } from "antd";
-
-const { Footer } = Layout;
-
-const FooterStyled = styled(Footer)`
-    text-align: center;
-    width: 100%;
-    background-color: #001529;
-    color: #fff;
-    padding: 15px;
-    margin-top: auto;
-    position: fixed;
-    bottom: 0;
-`;
 
 export default function FooterComponent() {
-    return <FooterStyled>ARIA DESIGN CONSULTANTS © 2014</FooterStyled>;
+  return (
+    <footer className="bg-gray-900 text-white py-8 mt-16">
+      <div className="max-w-7xl mx-auto px-6 text-center">
+        <p className="text-gray-300">
+          ARIA DESIGN CONSULTANTS © 2014
+        </p>
+      </div>
+    </footer>
+  );
 }

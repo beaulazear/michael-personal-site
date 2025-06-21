@@ -1,6 +1,5 @@
-import React from "react";
-import styled from 'styled-components';
-import Card from 'react-bootstrap/Card';
+import React, { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import BKTH1 from '../images/BKTH1.png';
 import BKTH3 from '../images/BKTH3.png';
 import BKTH4 from '../images/BKTH4.png';
@@ -19,200 +18,182 @@ import CH9 from '../images/CHI9.jpg';
 import CH10 from '../images/CHI10.jpg';
 import CH11 from '../images/CHI11.jpg';
 
-const Container = styled.div`
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-    background-color: #f9f9f9;
-    padding: 10px;
-`;
+const Projects = () => {
+    const [isLoaded, setIsLoaded] = useState(false);
+    const [expandedProject, setExpandedProject] = useState(null);
 
-const Header = styled.h1`
-  font-size: 36px;
-  font-weight: 300;
-  color: #333;
-  margin: 0 auto 30px;
-  margin-top: 40px;
-  margin-bottom: 40px;
-  max-width: 60%;
-  letter-spacing: 1.2px;
-  text-transform: uppercase;
-  font-family: 'Times, Times New Roman, serif';
-  line-height: 1.2;
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+    const navigate = useNavigate();
+    const handleViewContact = () => {
+        navigate('/contact');
+    };
 
-  @media (max-width: 1200px) {
-    max-width: 70%;
-    margin-top: 25px;
-    margin-bottom: 25px;
-  }
+    const projects = [
+        {
+            id: 1,
+            title: "Lakefront Condo",
+            location: "Chicago",
+            brief: "Michael brings a sophisticated balance of modern luxury and warm elegance to this Chicago condo.",
+            description: "In this thoughtfully redesigned condo, Michael brings a sophisticated balance of modern luxury and warm elegance. Recognizing the potential for maximizing natural light and creating a seamless flow throughout the space, he has transformed each room with a refined palette and carefully curated decor. The living room features large mirrors that add depth and openness, plush seating in soft, neutral tones, and carefully curated greenery. In the kitchen, Michael opted for a bold red accent on the ceiling, sleek cabinetry, and open shelving that showcases artisanal decor. The bathroom is a calming retreat with classic white tile, dark trim, and organic elements, while the bedroom offers a serene sanctuary with natural wood textures and soft textiles.",
+            images: [CH3, CH4, CH5, CH6, CH7, CH8, CH9, CH10, CH11],
+            featured: CH3
+        },
+        {
+            id: 2,
+            title: "Brooklyn Townhouse",
+            location: "Lincoln Place",
+            brief: "This townhouse renovation highlights natural light and showcases beautiful custom features.",
+            description: "This was a gut renovation of the kitchen with cosmetic upgrades throughout the entire 4 floors. When first walking into the brownstone, Michael realized that one of the real features, the lush backyard, was hidden from view. He changed the layout of the kitchen and added a glass wall to allow a view and light to pour through. Cosmetic changes included staining the beams a darker color, refinishing the floors, paint, wallpaper, and then a custom-designed and built-in bookcase and stone around the fireplace. The downstairs bar area had everything it needed but felt like a new show home. The simple updates of painting, changing the hardware, adding an antique glass tile backsplash gave the space the bespoke bar area the homeowners dreamt of.",
+            images: [BKTH1, BKTH4, BKTH3],
+            featured: BKTH1
+        },
+        {
+            id: 3,
+            title: "Talmage Lane",
+            location: "Hamptons NY",
+            brief: "This project involved reimagining a Sears Kit House into a 3-story cottage with a walk-out lower level.",
+            description: "Michael purchased Talmage as a turn-around. Originally a Sears Kit House built on a hill, Michael reimagined this as a 3-story cottage with an addition and walk-out lower level. When Michael is not working for a specific client, he imagines the family that will live in the home. He builds the home and then waits for the family to find their new home. (Maybe not the smartest business plan... but it works) This was sold turn-key with all furniture, linens, kitchen items, etc. All of the furniture comes from the Rachael Ray Furniture Line, designed by Michael.",
+            images: [TLANE1, TLANE2, TLANE3, TLANE4, TLANE5],
+            featured: TLANE1
+        }
+    ];
 
-  @media (max-width: 768px) {
-    font-size: 32px;
-    max-width: 80%;
-  }
+    useEffect(() => {
+        // Scroll to top on component mount
+        window.scrollTo(0, 0);
 
-  @media (max-width: 550px) {
-    font-size: 26px;
-    max-width: 90%;
-    letter-spacing: 1px;
-  }
-`;
+        setIsLoaded(true);
+    }, []);
 
-const CardContainer = styled.div`
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    flex: 1;
-    padding-bottom: 30px;
-`;
+    const toggleProject = (projectId) => {
+        setExpandedProject(expandedProject === projectId ? null : projectId);
+    };
 
-const StyledCard = styled(Card)`
-    max-width: 900px;
-    width: 100%;
-    margin-bottom: 25px;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
-    border-radius: 8px;
-    overflow: hidden;
-    position: relative;
-    transition: all 0.3s ease;
-`;
-
-const CardTextContainer = styled.div`
-    padding: 15px;
-    text-align: center;
-    font-family: 'Times, Times New Roman, serif';
-    background-color: #fff;
-`;
-
-const CardTitle = styled.h2`
-    font-size: 1.6em;
-    font-weight: 400;
-    color: #333;
-`;
-
-const CardBrief = styled.p`
-    font-size: 1em;
-    color: #555;
-`;
-
-const ExpandedDescription = styled.div`
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.3s ease, padding 0.3s ease;
-    background-color: rgba(255, 255, 255, 0.9);
-    padding: 0 15px;
-
-    // Expand content on hover for larger screens
-    ${StyledCard}:hover & {
-        max-height: 600px;
-        padding: 15px;
-    }
-
-    // Fully expand on small screens without hover
-    @media (max-width: 768px) {
-        max-height: none;
-        padding: 15px;
-    }
-`;
-
-const ImageContainer = styled.div`
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 15px;
-    width: 100%;
-    margin-top: 20px;
-`;
-
-const CardImage = styled.img`
-    width: 100%;
-    height: auto;
-    border-radius: 8px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    &:hover {
-        transform: scale(1.05);
-        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
-    }
-`;
-
-export default function Projects() {
     return (
-        <Container>
-            <Header>Recent Projects</Header>
-            <CardContainer>
-                <StyledCard>
-                    <CardTextContainer>
-                        <CardTitle>Lakefront Condo, Chicago</CardTitle>
-                        <CardBrief>Michael brings a sophisticated balance of modern luxury and warm elegance to this Chicago condo.</CardBrief>
-                    </CardTextContainer>
-                    <ExpandedDescription>
-                        In this thoughtfully redesigned condo, Michael brings a sophisticated balance of modern luxury and warm elegance.
-                        Recognizing the potential for maximizing natural light and creating a seamless flow throughout the space,
-                        he has transformed each room with a refined palette and carefully curated decor.
-                        <br /><br />
-                        The living room features large mirrors that add depth and openness, plush seating in soft, neutral tones, and carefully curated greenery.
-                        In the kitchen, Michael opted for a bold red accent on the ceiling, sleek cabinetry, and open shelving that showcases artisanal decor.
-                        The bathroom is a calming retreat with classic white tile, dark trim, and organic elements, while the bedroom offers a serene sanctuary with
-                        natural wood textures and soft textiles.
-                    </ExpandedDescription>
-                    <ImageContainer>
-                        <CardImage src={CH3} />
-                        <CardImage src={CH4} />
-                        <CardImage src={CH5} />
-                        <CardImage src={CH6} />
-                        <CardImage src={CH7} />
-                        <CardImage src={CH8} />
-                        <CardImage src={CH9} />
-                        <CardImage src={CH10} />
-                        <CardImage src={CH11} />
-                    </ImageContainer>
-                </StyledCard>
-                <StyledCard>
-                    <CardTextContainer>
-                        <CardTitle>Brooklyn Townhouse, Lincoln Place</CardTitle>
-                        <CardBrief>This townhouse renovation highlights natural light and showcases beautiful custom features.</CardBrief>
-                    </CardTextContainer>
-                    <ExpandedDescription>
-                        This was a gut renovation of the kitchen with cosmetic upgrades throughout the entire 4 floors.
-                        When first walking into the brownstone, Michael realized that one of the real features, the lush
-                        backyard, was hidden from view. He changed the layout of the kitchen and added a glass wall to allow
-                        a view and light to pour through. Cosmetic changes included staining the beams a darker color,
-                        refinishing the floors, paint, wallpaper, and then a custom-designed and built-in bookcase and stone
-                        around the fireplace.
-                        <br /><br />
-                        The downstairs bar area had everything it needed but felt like a new show home. The simple updates
-                        of painting, changing the hardware, adding an antique glass tile backsplash gave the space the bespoke
-                        bar area the homeowners dreamt of.
-                    </ExpandedDescription>
-                    <ImageContainer>
-                        <CardImage src={BKTH1} />
-                        <CardImage src={BKTH4} />
-                        <CardImage src={BKTH3} />
-                    </ImageContainer>
-                </StyledCard>
-                <StyledCard>
-                    <CardTextContainer>
-                        <CardTitle>Talmage Lane, Hamptons NY</CardTitle>
-                        <CardBrief>This project involved reimagining a Sears Kit House into a 3-story cottage with a walk-out lower level.</CardBrief>
-                    </CardTextContainer>
-                    <ExpandedDescription>
-                        Michael purchased Talmage as a turn-around. Originally a Sears Kit House built on a hill, Michael
-                        reimagined this as a 3-story cottage with an addition and walk-out lower level. When Michael is not
-                        working for a specific client, he imagines the family that will live in the home. He builds the home
-                        and then waits for the family to find their new home. (Maybe not the smartest business plan... but it works)
-                        <br /><br />
-                        This was sold turn-key with all furniture, linens, kitchen items, etc. All of the furniture comes
-                        from the Rachael Ray Furniture Line, designed by Michael.
-                    </ExpandedDescription>
-                    <ImageContainer>
-                        <CardImage src={TLANE1} />
-                        <CardImage src={TLANE2} />
-                        <CardImage src={TLANE3} />
-                        <CardImage src={TLANE4} />
-                        <CardImage src={TLANE5} />
-                    </ImageContainer>
-                </StyledCard>
-            </CardContainer>
-        </Container>
+        <div className="min-h-screen bg-white relative overflow-hidden">
+            <div className="relative z-10 pt-32 pb-20">
+                {/* Header */}
+                <div className={`text-center mb-16 transform transition-all duration-1000 ${isLoaded ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'}`}>
+                    <div className="inline-block mb-6">
+                        <span className="text-sm uppercase tracking-[0.3em] bg-gradient-to-r from-gray-600 to-gray-800 bg-clip-text text-transparent font-light">
+                            Portfolio
+                        </span>
+                        <div className="w-16 h-px bg-gradient-to-r from-transparent via-gray-400 to-transparent mt-2 mx-auto"></div>
+                    </div>
+                    <h1 className="text-4xl md:text-5xl lg:text-6xl font-serif text-gray-900 tracking-tight">
+                        Recent Projects
+                    </h1>
+                </div>
+
+                {/* Projects Grid */}
+                <div className="max-w-7xl mx-auto px-6">
+                    <div className="space-y-20">
+                        {projects.map((project, index) => (
+                            <div
+                                key={project.id}
+                                className={`transform transition-all duration-1000 ${isLoaded ? 'translate-y-0 opacity-100' : 'translate-y-12 opacity-0'}`}
+                                style={{ transitionDelay: `${300 + (index * 200)}ms` }}
+                            >
+                                <div className="bg-white/80 backdrop-blur-sm rounded-3xl shadow-xl overflow-hidden hover:shadow-2xl transition-shadow duration-500">
+                                    {/* Project Header */}
+                                    <div className="p-8 lg:p-12">
+                                        <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-start">
+
+                                            {/* Project Info */}
+                                            <div className="space-y-6">
+                                                <div>
+                                                    <h2 className="text-3xl lg:text-4xl font-serif text-gray-900 mb-2">
+                                                        {project.title}
+                                                    </h2>
+                                                    <h3 className="text-xl text-gray-600 font-light mb-6">
+                                                        {project.location}
+                                                    </h3>
+                                                    <p className="text-lg text-gray-700 leading-relaxed">
+                                                        {project.brief}
+                                                    </p>
+                                                </div>
+
+                                                {/* Expand Button */}
+                                                <button
+                                                    onClick={() => toggleProject(project.id)}
+                                                    className="flex items-center gap-2 text-gray-900 hover:text-gray-700 font-medium transition-colors duration-300"
+                                                >
+                                                    {expandedProject === project.id ? 'Read Less' : 'Read More'}
+                                                    <svg
+                                                        className={`w-4 h-4 transition-transform duration-300 ${expandedProject === project.id ? 'rotate-180' : ''
+                                                            }`}
+                                                        fill="none"
+                                                        stroke="currentColor"
+                                                        viewBox="0 0 24 24"
+                                                    >
+                                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                                                    </svg>
+                                                </button>
+
+                                                {/* Expanded Description */}
+                                                <div className={`overflow-hidden transition-all duration-500 ${expandedProject === project.id ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
+                                                    }`}>
+                                                    <div className="pt-4 border-t border-gray-200">
+                                                        <p className="text-gray-600 leading-relaxed">
+                                                            {project.description}
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            {/* Featured Image */}
+                                            <div className="relative">
+                                                <div className="aspect-w-4 aspect-h-3 rounded-2xl overflow-hidden shadow-lg">
+                                                    <img
+                                                        src={project.featured}
+                                                        alt={`${project.title} featured view`}
+                                                        className="w-full h-80 lg:h-96 object-cover hover:scale-105 transition-transform duration-700"
+                                                    />
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    {/* Image Gallery */}
+                                    <div className="px-8 lg:px-12 pb-8 lg:pb-12">
+                                        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+                                            {project.images.slice(1).map((image, imageIndex) => (
+                                                <div
+                                                    key={imageIndex}
+                                                    className="aspect-square rounded-xl overflow-hidden shadow-md hover:shadow-lg transition-all duration-300 group"
+                                                >
+                                                    <img
+                                                        src={image}
+                                                        alt={`${project.title} detail ${imageIndex + 1}`}
+                                                        className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                                                    />
+                                                </div>
+                                            ))}
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+
+                {/* Call to Action */}
+                <div className="text-center mt-20">
+                    <div className={`inline-block transform transition-all duration-1000 ${isLoaded ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'}`}
+                        style={{ transitionDelay: `${300 + (projects.length * 200)}ms` }}>
+                        <p className="text-gray-600 mb-6">
+                            Ready to transform your space?
+                        </p>
+                        <button onClick={handleViewContact} className="inline-flex items-center justify-center px-8 py-3 text-white bg-gray-900 rounded-full hover:bg-gray-800 transition-colors duration-300 font-medium">
+                            Get In Touch
+                            <svg className="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
     );
-}
+};
+
+export default Projects;

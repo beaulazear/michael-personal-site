@@ -1,130 +1,175 @@
-// Contact.js
-import React from "react";
-import styled from "styled-components";
-import { Card as AntCard } from "antd";
+import React, { useState, useEffect } from 'react';
 import AriaMichael from "../images/AriaMichael.png";
 import Michael2 from "../images/Michael2.jpeg";
 
-const PageContainer = styled.div`
-    background-color: #f5f5f5;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 40px;
+const Contact = () => {
+    const [isLoaded, setIsLoaded] = useState(false);
 
-    @media (max-width: 800px) {
-        padding: 20px;
-        padding-bottom: 45px;
-    }
-`;
+    useEffect(() => {
+        // Scroll to top on component mount
+        window.scrollTo(0, 0);
 
-const ContentContainer = styled.div`
-    display: flex;
-    gap: 20px;
-    max-width: 1000px;
-    width: 100%;
-    align-items: stretch;
-    background-color: #f5f5f5;
-    border-radius: 10px;
+        setIsLoaded(true);
+    }, []);
 
-    @media (max-width: 800px) {
-        flex-direction: column;
-        align-items: center;
-        padding: 10px;
-        padding-bottom: 20px;
-    }
-`;
-
-const ImageContainer = styled.div`
-    flex: 1;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-basis: 50%;
-
-    @media (max-width: 800px) {
-        order: -1;
-        width: 80%; // Shrink the width of the image on mobile
-        flex-basis: auto;
-    }
-`;
-
-const Image = styled.img`
-    width: 100%;
-    max-width: 100%;
-    height: 100%;
-    border-radius: 10px;
-    object-fit: cover;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
-
-    @media (max-width: 800px) {
-        height: auto;
-        width: 100%;  // Allow the image to resize more naturally on smaller screens
-        max-width: 90%; // Add margin around the image
-        margin-bottom: 15px;
-        border-radius: 8px;
-    }
-`;
-
-const StyledCard = styled(AntCard)`
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
-    padding: 30px;
-    text-align: center;
-    flex-basis: 50%;
-
-    @media (max-width: 800px) {
-        box-shadow: none;
-        text-align: center;
-        padding: 20px;
-        flex-basis: auto;
-        width: 90%; // Add a maximum width for the card on mobile for balance
-    }
-`;
-
-const Title = styled.h2`
-    font-size: 1.8em;
-    color: #333;
-    margin-bottom: 10px;
-    font-family: 'Times, Times New Roman, serif';
-    font-weight: 500;
-    text-shadow: 0.5px 0 #888888;
-    letter-spacing: 1px;
-`;
-
-const Paragraph = styled.p`
-    font-size: 1.2em;
-    color: #555;
-    line-height: 1.6;
-    text-align: left;
-`;
-
-const Logo = styled.img`
-    width: 100%;
-    max-width: 250px;
-    margin-top: 20px;
-`;
-
-export default function Contact() {
     return (
-        <PageContainer>
-            <ContentContainer>
-                <ImageContainer>
-                    <Image src={Michael2} alt="Michael" />
-                </ImageContainer>
-                <StyledCard>
-                    <Title>Michael S. Murray</Title>
-                    <Paragraph>
-                        Originally from Chicago, Michael's love of architecture was sparked by Louis Sullivan's work in and around the city. He combines his passions for architecture, construction, and design to transform residential properties in suburban Chicago, New York City, and the Hamptons into their highest potential while delivering exceptional value for clients.
-                    </Paragraph>
-                    <Logo src={AriaMichael} alt="brand with Michael's contact info" />
-                </StyledCard>
-            </ContentContainer>
-        </PageContainer>
+        <div className="min-h-screen bg-white relative overflow-hidden">
+            <div className="relative z-10 pt-32 pb-20">
+                {/* Header */}
+                <div className={`text-center mb-16 transform transition-all duration-1000 ${isLoaded ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'}`}>
+                    <div className="inline-block mb-6">
+                        <span className="text-sm uppercase tracking-[0.3em] bg-gradient-to-r from-gray-600 to-gray-800 bg-clip-text text-transparent font-light">
+                            About
+                        </span>
+                        <div className="w-16 h-px bg-gradient-to-r from-transparent via-gray-400 to-transparent mt-2 mx-auto"></div>
+                    </div>
+                    <h1 className="text-4xl md:text-5xl lg:text-6xl font-serif text-gray-900 tracking-tight">
+                        Meet Michael
+                    </h1>
+                </div>
+
+                {/* Main Content */}
+                <div className="max-w-6xl mx-auto px-6">
+                    <div className={`transform transition-all duration-1000 delay-300 ${isLoaded ? 'translate-y-0 opacity-100' : 'translate-y-12 opacity-0'}`}>
+                        <div className="bg-white/80 backdrop-blur-sm rounded-3xl shadow-xl overflow-hidden">
+
+                            {/* Desktop Layout */}
+                            <div className="hidden lg:block">
+                                <div className="grid lg:grid-cols-2 items-center">
+
+                                    {/* Image Section */}
+                                    <div className="p-8">
+                                        <div className="rounded-2xl overflow-hidden shadow-lg">
+                                            <img
+                                                src={Michael2}
+                                                alt="Michael S. Murray"
+                                                className="w-full h-auto"
+                                            />
+                                        </div>
+                                    </div>
+
+                                    {/* Content Section */}
+                                    <div className="p-12 flex flex-col justify-center">
+                                        <div className="space-y-8">
+                                            <div>
+                                                <h2 className="text-4xl font-serif text-gray-900 mb-4">
+                                                    Michael S. Murray
+                                                </h2>
+                                                <div className="w-20 h-px bg-gradient-to-r from-gray-400 to-transparent mb-8"></div>
+
+                                                <p className="text-lg text-gray-700 leading-relaxed">
+                                                    Originally from Chicago, Michael's love of architecture was sparked by Louis Sullivan's work in and around the city. He combines his passions for architecture, construction, and design to transform residential properties in suburban Chicago, New York City, and the Hamptons into their highest potential while delivering exceptional value for clients.
+                                                </p>
+                                            </div>
+
+                                            {/* Contact Info */}
+                                            <div className="space-y-4">
+                                                <h3 className="text-xl font-serif text-gray-900 mb-4">Get In Touch</h3>
+                                                <div className="space-y-2 text-gray-600">
+                                                    <p className="flex items-center gap-3">
+                                                        <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                                                        </svg>
+                                                        <span>michael@ariadesign.com</span>
+                                                    </p>
+                                                    <p className="flex items-center gap-3">
+                                                        <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                                                        </svg>
+                                                        <span>(555) 123-4567</span>
+                                                    </p>
+                                                </div>
+                                            </div>
+
+                                            {/* Logo */}
+                                            <div className="pt-6">
+                                                <img
+                                                    src={AriaMichael}
+                                                    alt="Aria Design Consultants"
+                                                    className="h-24 w-auto opacity-90"
+                                                />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            {/* Mobile Layout */}
+                            <div className="lg:hidden">
+                                <div className="p-8">
+                                    {/* Image */}
+                                    <div className="relative mb-8 rounded-2xl overflow-hidden shadow-lg">
+                                        <img
+                                            src={Michael2}
+                                            alt="Michael S. Murray"
+                                            className="w-full h-auto"
+                                        />
+                                    </div>
+
+                                    {/* Content */}
+                                    <div className="text-center space-y-6">
+                                        <div>
+                                            <h2 className="text-3xl font-serif text-gray-900 mb-4">
+                                                Michael S. Murray
+                                            </h2>
+                                            <div className="w-16 h-px bg-gradient-to-r from-transparent via-gray-400 to-transparent mx-auto mb-6"></div>
+
+                                            <p className="text-gray-700 leading-relaxed text-left">
+                                                Originally from Chicago, Michael's love of architecture was sparked by Louis Sullivan's work in and around the city. He combines his passions for architecture, construction, and design to transform residential properties in suburban Chicago, New York City, and the Hamptons into their highest potential while delivering exceptional value for clients.
+                                            </p>
+                                        </div>
+
+                                        {/* Contact Info */}
+                                        <div className="space-y-4 pt-6">
+                                            <h3 className="text-lg font-serif text-gray-900 mb-4">Get In Touch</h3>
+                                            <div className="space-y-3 text-gray-600">
+                                                <p className="flex items-center justify-center gap-3">
+                                                    <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                                                    </svg>
+                                                    <span>mike@ariadesignllc.com</span>
+                                                </p>
+                                                <p className="flex items-center justify-center gap-3">
+                                                    <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                                                    </svg>
+                                                    <span>(414) 559-2742</span>
+                                                </p>
+                                            </div>
+                                        </div>
+
+                                        {/* Logo */}
+                                        <div className="pt-6">
+                                            <img
+                                                src={AriaMichael}
+                                                alt="Aria Design Consultants"
+                                                className="h-20 w-auto mx-auto opacity-90"
+                                            />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                {/* Call to Action */}
+                {/* <div className="text-center mt-16">
+                    <div className={`inline-block transform transition-all duration-1000 delay-500 ${isLoaded ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'}`}>
+                        <p className="text-gray-600 mb-6">
+                            Ready to start your project?
+                        </p>
+                        <button className="inline-flex items-center justify-center px-8 py-3 text-white bg-gray-900 rounded-full hover:bg-gray-800 transition-colors duration-300 font-medium">
+                            Start a Conversation
+                            <svg className="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                            </svg>
+                        </button>
+                    </div>
+                </div> */}
+            </div>
+        </div>
     );
-}
+};
+
+export default Contact;

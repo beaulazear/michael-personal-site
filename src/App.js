@@ -1,3 +1,4 @@
+// App.js
 import React from 'react';
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Route, Routes, Navigate } from 'react-router-dom';
@@ -10,16 +11,37 @@ import Furniture from './components/Furniture'
 
 export default function App() {
   return (
-    <div style={{height: '100vh'}}>
-      <PageNavLinks />
+    <div className="min-h-screen bg-white">
       <Routes>
-        <Route path="/" element={<ImageGallery />} />
-        <Route path="/projects" element={<Projects />} />
-        <Route path="/furniture" element={<Furniture />} />
-        <Route path="/contact" element={<Contact />} />
+        <Route path="/" element={
+          <>
+            <PageNavLinks transparent={true} />
+            <ImageGallery />
+          </>
+        } />
+        <Route path="/projects" element={
+          <>
+            <PageNavLinks transparent={false} />
+            <Projects />
+            <FooterComponent />
+          </>
+        } />
+        <Route path="/furniture" element={
+          <>
+            <PageNavLinks transparent={false} />
+            <Furniture />
+            <FooterComponent />
+          </>
+        } />
+        <Route path="/contact" element={
+          <>
+            <PageNavLinks transparent={false} />
+            <Contact />
+            <FooterComponent />
+          </>
+        } />
         <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>
-      <FooterComponent />
     </div>
   )
 };
