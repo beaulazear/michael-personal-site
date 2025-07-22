@@ -1,5 +1,6 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback, useMemo } from 'react';
 import { useNavigate } from 'react-router-dom';
+import OptimizedImage from './OptimizedImage';
 import BKTH1 from '../images/BKTH1.png';
 import BKTH3 from '../images/BKTH3.png';
 import BKTH4 from '../images/BKTH4.png';
@@ -17,6 +18,7 @@ import CH8 from '../images/CHI8.jpg';
 import CH9 from '../images/CHI9.jpg';
 import CH10 from '../images/CHI10.jpg';
 import CH11 from '../images/CHI11.jpg';
+
 
 const Projects = () => {
     const [isLoaded, setIsLoaded] = useState(false);
@@ -64,9 +66,15 @@ const Projects = () => {
         setIsLoaded(true);
     }, []);
 
-    const toggleProject = (projectId) => {
+    const handleImageLoad = useCallback(() => {
+        // Image loaded callback
+    }, []);
+
+    const toggleProject = useCallback((projectId) => {
         setExpandedProject(expandedProject === projectId ? null : projectId);
-    };
+    }, [expandedProject]);
+
+    const memoizedProjects = useMemo(() => projects, [projects]);
 
     return (
         <div className="min-h-screen bg-white relative overflow-hidden">
@@ -87,7 +95,7 @@ const Projects = () => {
                 {/* Projects Grid */}
                 <div className="max-w-7xl mx-auto px-6">
                     <div className="space-y-20">
-                        {projects.map((project, index) => (
+                        {memoizedProjects.map((project, index) => (
                             <div
                                 key={project.id}
                                 className={`transform transition-all duration-1000 ${isLoaded ? 'translate-y-0 opacity-100' : 'translate-y-12 opacity-0'}`}
@@ -142,11 +150,13 @@ const Projects = () => {
 
                                             {/* Featured Image */}
                                             <div className="relative">
-                                                <div className="aspect-w-4 aspect-h-3 rounded-2xl overflow-hidden shadow-lg">
-                                                    <img
+                                                <div className="aspect-w-4 aspect-h-3 rounded-2xl overflow-hidden shadow-lg group">
+                                                    <OptimizedImage
                                                         src={project.featured}
                                                         alt={`${project.title} featured view`}
-                                                        className="w-full h-80 lg:h-96 object-cover hover:scale-105 transition-transform duration-700"
+                                                        className="w-full h-80 lg:h-96 object-cover group-hover:scale-105 transition-transform duration-700"
+                                                        onLoad={handleImageLoad}
+                                                        optimizationOptions={{ quality: 90 }}
                                                     />
                                                 </div>
                                             </div>
@@ -161,10 +171,12 @@ const Projects = () => {
                                                     key={imageIndex}
                                                     className="aspect-square rounded-xl overflow-hidden shadow-md hover:shadow-lg transition-all duration-300 group"
                                                 >
-                                                    <img
+                                                    <OptimizedImage
                                                         src={image}
                                                         alt={`${project.title} detail ${imageIndex + 1}`}
                                                         className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                                                        onLoad={handleImageLoad}
+                                                        optimizationOptions={{ quality: 85 }}
                                                     />
                                                 </div>
                                             ))}

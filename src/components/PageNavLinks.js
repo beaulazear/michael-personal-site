@@ -1,7 +1,7 @@
 // PageNavLinks.js
 import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
-import Aria_header from "../images/Aria_header.png";
+import Aria_header from "../images/Aria_header.svg";
 
 function PageNavLinks({ transparent = false }) {
   const [linksVisible, setLinksVisible] = useState(false);
