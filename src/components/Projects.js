@@ -29,7 +29,7 @@ const Projects = () => {
         navigate('/contact');
     };
 
-    const projects = [
+    const projects = useMemo(() => [
         {
             id: 1,
             title: "Lakefront Condo",
@@ -57,7 +57,7 @@ const Projects = () => {
             images: [TLANE1, TLANE2, TLANE3, TLANE4, TLANE5],
             featured: TLANE1
         }
-    ];
+    ], []);
 
     useEffect(() => {
         // Scroll to top on component mount
@@ -74,7 +74,6 @@ const Projects = () => {
         setExpandedProject(expandedProject === projectId ? null : projectId);
     }, [expandedProject]);
 
-    const memoizedProjects = useMemo(() => projects, [projects]);
 
     return (
         <div className="min-h-screen bg-white relative overflow-hidden">
@@ -95,7 +94,7 @@ const Projects = () => {
                 {/* Projects Grid */}
                 <div className="max-w-7xl mx-auto px-6">
                     <div className="space-y-20">
-                        {memoizedProjects.map((project, index) => (
+                        {projects.map((project, index) => (
                             <div
                                 key={project.id}
                                 className={`transform transition-all duration-1000 ${isLoaded ? 'translate-y-0 opacity-100' : 'translate-y-12 opacity-0'}`}

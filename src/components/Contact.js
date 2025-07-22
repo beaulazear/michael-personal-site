@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import AriaMichael from "../images/AriaMichael.png";
 import Michael2 from "../images/Michael2.jpeg";
 
 const Contact = () => {
@@ -49,7 +48,7 @@ const Contact = () => {
                                     </div>
 
                                     {/* Content Section */}
-                                    <div className="p-12 flex flex-col justify-center">
+                                    <div className="p-12 lg:p-16 flex flex-col justify-center">
                                         <div className="space-y-8">
                                             <div>
                                                 <h2 className="text-4xl font-serif text-gray-900 mb-4">
@@ -63,31 +62,21 @@ const Contact = () => {
                                             </div>
 
                                             {/* Contact Info */}
-                                            <div className="space-y-4">
-                                                <h3 className="text-xl font-serif text-gray-900 mb-4">Get In Touch</h3>
-                                                <div className="space-y-2 text-gray-600">
-                                                    <p className="flex items-center gap-3">
-                                                        <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <div className="pt-8">
+                                                <h3 className="text-xl font-serif text-gray-900 mb-6">Get In Touch</h3>
+                                                <div className="bg-gray-50 rounded-lg p-6">
+                                                    <p className="flex items-center gap-3 text-gray-700">
+                                                        <svg className="w-5 h-5 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                                                         </svg>
-                                                        <span>michael@ariadesign.com</span>
-                                                    </p>
-                                                    <p className="flex items-center gap-3">
-                                                        <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
-                                                        </svg>
-                                                        <span>(555) 123-4567</span>
+                                                        <span className="font-medium">michael@ariadesign.com</span>
                                                     </p>
                                                 </div>
                                             </div>
 
-                                            {/* Logo */}
-                                            <div className="pt-6">
-                                                <img
-                                                    src={AriaMichael}
-                                                    alt="Aria Design Consultants"
-                                                    className="h-24 w-auto opacity-90"
-                                                />
+                                            {/* Decorative Element */}
+                                            <div className="pt-8">
+                                                <div className="w-full h-px bg-gradient-to-r from-transparent via-gray-300 to-transparent"></div>
                                             </div>
                                         </div>
                                     </div>
@@ -120,31 +109,21 @@ const Contact = () => {
                                         </div>
 
                                         {/* Contact Info */}
-                                        <div className="space-y-4 pt-6">
+                                        <div className="pt-8">
                                             <h3 className="text-lg font-serif text-gray-900 mb-4">Get In Touch</h3>
-                                            <div className="space-y-3 text-gray-600">
-                                                <p className="flex items-center justify-center gap-3">
-                                                    <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <div className="bg-gray-50 rounded-lg p-5">
+                                                <p className="flex items-center justify-center gap-3 text-gray-700">
+                                                    <svg className="w-5 h-5 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                                                     </svg>
-                                                    <span>mike@ariadesignllc.com</span>
-                                                </p>
-                                                <p className="flex items-center justify-center gap-3">
-                                                    <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
-                                                    </svg>
-                                                    <span>(414) 559-2742</span>
+                                                    <span className="font-medium">mike@ariadesignllc.com</span>
                                                 </p>
                                             </div>
                                         </div>
 
-                                        {/* Logo */}
-                                        <div className="pt-6">
-                                            <img
-                                                src={AriaMichael}
-                                                alt="Aria Design Consultants"
-                                                className="h-20 w-auto mx-auto opacity-90"
-                                            />
+                                        {/* Decorative Element */}
+                                        <div className="pt-8">
+                                            <div className="w-24 h-px bg-gradient-to-r from-transparent via-gray-300 to-transparent mx-auto"></div>
                                         </div>
                                     </div>
                                 </div>

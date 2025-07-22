@@ -67,14 +67,16 @@ const ImageGallery = () => {
       {/* Glossy overlay effects */}
       <div className="absolute inset-0 bg-gradient-to-br from-white/30 via-transparent to-white/10 pointer-events-none"></div>
 
-      <style jsx>{`
-        .animation-delay-2000 {
-          animation-delay: 2s;
-        }
-        .animation-delay-4000 {
-          animation-delay: 4s;
-        }
-      `}</style>
+      <style dangerouslySetInnerHTML={{
+        __html: `
+          .animation-delay-2000 {
+            animation-delay: 2s;
+          }
+          .animation-delay-4000 {
+            animation-delay: 4s;
+          }
+        `
+      }} />
     </div>
   );
 };
