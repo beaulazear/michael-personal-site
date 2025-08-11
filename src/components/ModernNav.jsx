@@ -39,13 +39,17 @@ const ModernNav = () => {
           <div className="flex items-center justify-between">
             <div 
               onClick={() => scrollToSection('home')}
-              className="cursor-pointer group"
+              className={`cursor-pointer group transition-all duration-300 ${
+                isMobileMenuOpen ? 'opacity-0 pointer-events-none md:opacity-100 md:pointer-events-auto' : 'opacity-100'
+              }`}
             >
-              <h1 className={`text-2xl font-serif tracking-wider transition-colors duration-300 ${
-                isScrolled ? 'text-gray-900' : 'text-white'
-              } group-hover:opacity-80`}>
-                ARIA
-              </h1>
+              <img 
+                src={AriaHeader} 
+                alt="Aria Design Consultants" 
+                className={`h-10 w-auto transition-all duration-300 ${
+                  isScrolled ? 'brightness-0' : 'brightness-0 invert'
+                } group-hover:opacity-80`}
+              />
             </div>
 
             <div className="hidden md:flex items-center space-x-8">
@@ -60,13 +64,6 @@ const ModernNav = () => {
                   {item.label}
                 </button>
               ))}
-              <img 
-                src={AriaHeader} 
-                alt="Aria Design Consultants" 
-                className={`h-10 w-auto transition-all duration-300 ${
-                  isScrolled ? 'opacity-90' : 'opacity-100'
-                }`}
-              />
             </div>
 
             <button
@@ -122,8 +119,11 @@ const ModernNav = () => {
           <div className="relative p-8 pt-24 h-full flex flex-col">
             {/* Logo */}
             <div className="mb-12">
-              <h2 className="text-2xl font-serif text-white tracking-wider">ARIA</h2>
-              <p className="text-xs tracking-[0.3em] bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent mt-1">DESIGN CONSULTANTS</p>
+              <img 
+                src={AriaHeader} 
+                alt="Aria Design Consultants" 
+                className="h-12 w-auto brightness-0 invert mb-4"
+              />
               <div className="w-12 h-px bg-gradient-to-r from-blue-400/40 via-purple-400/40 to-transparent mt-4"></div>
             </div>
 
