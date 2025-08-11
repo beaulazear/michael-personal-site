@@ -31,7 +31,7 @@ const ModernNav = () => {
   return (
     <>
       <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
-        isScrolled 
+        isScrolled && !isMobileMenuOpen
           ? 'bg-white/95 backdrop-blur-md shadow-lg py-4' 
           : 'bg-transparent py-6'
       }`}>
@@ -69,7 +69,7 @@ const ModernNav = () => {
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
               className={`md:hidden p-2 transition-colors duration-300 ${
-                isScrolled ? 'text-gray-900' : 'text-white'
+                isScrolled && !isMobileMenuOpen ? 'text-gray-900' : 'text-white'
               }`}
             >
               <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
