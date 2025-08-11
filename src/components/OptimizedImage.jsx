@@ -52,7 +52,7 @@ const OptimizedImage = ({
     };
 
     const handleError = (e) => {
-        console.warn('Image failed to load:', src, error);
+        // Silently handle error in production
         setHasLoaded(true);
     };
 
