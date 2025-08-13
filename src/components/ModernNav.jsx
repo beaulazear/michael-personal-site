@@ -162,7 +162,7 @@ const ModernNav = () => {
                 <span className="text-purple-400/40">•</span>
                 <span className="text-xs text-purple-400/60">New York</span>
                 <span className="text-blue-400/40">•</span>
-                <span className="text-xs text-pink-400/60">Hamptons</span>
+                <span className="text-xs text-purple-400/60">Hamptons</span>
               </div>
             </div>
           </div>

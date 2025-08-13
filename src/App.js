@@ -54,7 +54,7 @@ export default function App() {
       title: "Lakefront Condo",
       location: "Chicago",
       category: "Residential",
-      year: "2023",
+      year: "2024",
       brief: "Sophisticated balance of modern luxury and warm elegance",
       description: "In this thoughtfully redesigned condo, we brought a sophisticated balance of modern luxury and warm elegance. The space was transformed with maximized natural light, seamless flow, and a refined palette. Features include large mirrors for depth, plush neutral seating, sleek cabinetry with bold red accents, and a calming bathroom retreat.",
       images: [CH3, CH4, CH5, CH6, CH7, CH8, CH9, CH10, CH11],
