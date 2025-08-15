@@ -320,7 +320,7 @@ const ContactForm = () => {
         {submitStatus === 'success' && (
           <div className="p-4 bg-green-500/20 border border-green-400 rounded-xl">
             <p className="text-green-100 text-center font-medium">
-              ✨ Thank you for your inquiry! We'll be in touch within 24 hours.
+              ✨ Thank you for your inquiry! We'll be in touch soon!
             </p>
           </div>
         )}
