@@ -2,6 +2,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import ModernNav from './components/ModernNav';
 import OptimizedImage from './components/OptimizedImage';
 import FooterComponent from './components/Footer';
+import ContactForm from './components/ContactForm';
 
 // Import all images
 import BKTH1 from './images/BKTH1.png';
@@ -282,36 +283,26 @@ export default function App() {
 
       {/* Contact Section */}
       <section id="contact" className="pt-24 pb-20 bg-gradient-to-br from-slate-900 to-black text-white">
-        <div className="max-w-4xl mx-auto px-6 text-center pb-12">
-          <span className="text-sm uppercase tracking-[0.3em] text-white/60 font-light">Get in Touch</span>
-          <h2 className="text-4xl md:text-5xl font-serif mt-4 mb-8">Start Your Project</h2>
-          <div className="w-24 h-px bg-gradient-to-r from-transparent via-white/40 to-transparent mx-auto mb-12"></div>
-          
-          <p className="text-xl text-white/80 mb-12 max-w-2xl mx-auto">
-            Ready to transform your space into something extraordinary? Let's discuss your vision.
-          </p>
+        <div className="max-w-6xl mx-auto px-6 pb-12">
+          <div className="text-center mb-12">
+            <span className="text-sm uppercase tracking-[0.3em] text-white/60 font-light">Get in Touch</span>
+            <h2 className="text-4xl md:text-5xl font-serif mt-4 mb-8">Start Your Project</h2>
+            <div className="w-24 h-px bg-gradient-to-r from-transparent via-white/40 to-transparent mx-auto mb-12"></div>
+            
+            <p className="text-xl text-white/80 mb-12 max-w-2xl mx-auto">
+              Ready to transform your space into something extraordinary? Let's discuss your vision.
+            </p>
+          </div>
 
-          <div className="space-y-6">
-            <a 
-              href="mailto:mike@ariadesignllc.com"
-              className="inline-flex items-center justify-center gap-3 px-8 py-4 bg-white text-gray-900 rounded-full hover:bg-gray-100 transition-all duration-300 transform hover:scale-105 group"
-            >
-              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-              </svg>
-              <span className="font-medium">mike@ariadesignllc.com</span>
-              <svg className="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-              </svg>
-            </a>
+          {/* Contact Form */}
+          <ContactForm />
 
-            <div className="flex justify-center gap-6 pt-8">
-              <span className="text-sm text-white/60">Chicago</span>
-              <span className="text-white/40">•</span>
-              <span className="text-sm text-white/60">New York</span>
-              <span className="text-white/40">•</span>
-              <span className="text-sm text-white/60">Hamptons</span>
-            </div>
+          <div className="flex justify-center gap-6 pt-12 mt-8">
+            <span className="text-sm text-white/60">Chicago</span>
+            <span className="text-white/40">•</span>
+            <span className="text-sm text-white/60">New York</span>
+            <span className="text-white/40">•</span>
+            <span className="text-sm text-white/60">Hamptons</span>
           </div>
         </div>
       </section>
