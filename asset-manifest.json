@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.94110661.css",
-    "main.js": "/static/js/main.5fc32c80.js",
+    "main.css": "/static/css/main.479d2651.css",
+    "main.js": "/static/js/main.1c453f0d.js",
     "static/js/453.52041cee.chunk.js": "/static/js/453.52041cee.chunk.js",
     "static/media/CHI8.jpg": "/static/media/CHI8.a7270b365d7a3cc2a99f.jpg",
     "static/media/CHI7.jpg": "/static/media/CHI7.47c0c5abbd14093a9a42.jpg",
@@ -23,12 +23,12 @@
     "static/media/TLANE3.png": "/static/media/TLANE3.4e97edf9bc913cab0b93.png",
     "index.html": "/index.html",
     "static/media/Aria_header.svg": "/static/media/Aria_header.fc62755d15fca6f8851730feaf52f8f5.svg",
-    "main.94110661.css.map": "/static/css/main.94110661.css.map",
-    "main.5fc32c80.js.map": "/static/js/main.5fc32c80.js.map",
+    "main.479d2651.css.map": "/static/css/main.479d2651.css.map",
+    "main.1c453f0d.js.map": "/static/js/main.1c453f0d.js.map",
     "453.52041cee.chunk.js.map": "/static/js/453.52041cee.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.94110661.css",
-    "static/js/main.5fc32c80.js"
+    "static/css/main.479d2651.css",
+    "static/js/main.1c453f0d.js"
   ]
 }
